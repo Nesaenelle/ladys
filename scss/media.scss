@@ -1,0 +1,345 @@
+/* MOBILES */
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    // .audience,
+    // .join-system,    
+    // .prosperity,
+    .sign-up, // .facts,
+    // .success,
+    .contacts {
+        display: none;
+    }
+
+
+
+    .audience {
+        &__list {
+            &_item {
+                width: 50%;
+                padding: 60px 30px;
+                border: none;
+                &_img {
+                    margin: auto;
+                    background-position: center!important;
+                }
+                &_title,
+                &_descr {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .join-system {
+        margin-top: 50px;
+        .container {
+            padding: 0 20px;
+        }
+        &__list {
+
+            &_item {
+
+                margin-top: 40px;
+                width: 48%;
+                $c: &;
+                &:hover {
+                    #{$c}_info {
+                        background: initial;
+                        &_title {
+                            color: initial;
+                            ;
+                        }
+                        &_descr {
+                            color: initial;
+                            ;
+                        }
+                    }
+                }
+
+                &_info {
+                    width: 80%;
+                    padding: 35px;
+                    &_title {
+                        margin-top: 0;
+                    }
+                }
+                &_img {
+                    position: static; // max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .prosperity {
+        margin-top: 50px;
+        &__list {
+            align-items: initial;
+            &_item {
+                width: 50%;
+                height: auto;
+                padding: 20px;
+                border: none;
+                margin-top: 0px;
+                .btn {
+                    margin: 30px auto 0;
+                    display: block;
+                }
+                &_number {
+                    position: static;
+                    font-size: 200px;
+                    line-height: initial;
+                    text-align: center;
+                }
+                &_title,
+                &_descr {
+                    text-align: center;
+                    padding: 0;
+                }
+                &_info {
+                    position: static;
+                }
+            }
+        }
+    }
+    .sign-up {
+        .container {
+            flex-wrap: wrap;
+            min-height: auto;
+        }
+        &__form {
+            width: 100%;
+            padding: 70px 50px;
+            &_title {
+                h1 {
+                    font-size: 40px;
+                }
+            }
+            &_descr {
+                font-size: 20px;
+            }
+        }
+        &__bg {
+            height: 500px;
+            width: 100%;
+        }
+    }
+
+    .facts {
+        margin-top: 60px;
+        .container {
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+        &__counter {
+            width: 100%;
+            &_item {
+                margin-bottom: 20px;
+                &_amount {
+                    font-size: 72px;
+                }
+            }
+            &>div {
+                width: 100%;
+            }
+        }
+        &__slide {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .slider {
+        &__wrapper {
+            // flex-wrap: wrap;
+        }
+        &__item {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .title {
+        font-size: 36px;
+        line-height: 52px;
+        padding: 0 10px;
+        h1 {
+            font-size: 36px;
+        }
+    }
+    .top-block {
+        height: auto;
+    }
+    .top-block__info {
+        width: 100%;
+        position: static;
+        align-items: initial;
+        height: initial;
+        &_title {
+            padding: 0;
+            font-size: 28px;
+            line-height: 40px;
+        }
+        &_descr {
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn {
+            margin: 40px auto 0;
+            display: block;
+            padding: 27px 30px;
+        }
+        &_wrapper {
+            width: 100%;
+            padding: 40px 20px;
+        }
+    }
+
+    .reasons {
+        padding-top: 60px;
+        .container {
+            padding: 0 10px;
+        }
+        &__list {
+            margin-top: 60px;
+            &_item {
+                padding-left: 50px;
+                width: 100%;
+                margin-bottom: 30px;
+
+                &_title {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+                &_descr {
+                    width: 100%;
+                }
+                &_img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+
+    nav {
+        display: none;
+    }
+    footer {
+        .footer-links {
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 20px;
+            &__item {
+                margin-right: 10px;
+                margin-left: 0;
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .audience {
+        &__list {
+            &_item {
+                width: 100%;
+                padding: 30px 20px;
+                &_descr {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .join-system {
+        margin-top: 50px;
+        &__list {
+
+            &_item {
+                margin-top: 20px;
+                width: 100%;
+                flex-wrap: wrap;
+                height: auto;
+                width: 100%;
+
+                &_img {
+                    margin: auto;
+                }
+                &_info {
+                    padding-top: 10px;
+                    width: 100%;
+                    position: static;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .prosperity {
+        margin-top: 50px;
+        &__list {
+            align-items: initial;
+            &_item {
+                // margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+
+
+    .facts {
+        &__counter {
+            width: 100%;
+            &_item {
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                &_title,
+                &_descr,
+                &_amount {
+                    text-align: center;
+                }
+                &_title {
+                    margin: 0;
+                }
+                &_amount {
+                    font-size: 72px;
+                    line-height: 72px;
+                }
+                &_more {
+                    text-align: center;
+                    margin-top: 20px;
+                    display: block;
+                }
+                &_descr {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                }
+                &_col {
+                    width: 100%;
+                }
+            }
+            &>div {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title h1 {
+         font-size: 26px; 
+    }
+}

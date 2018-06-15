@@ -1,0 +1,33 @@
+.icon {
+    display: inline-block;
+
+    &-btn-arrow-down{
+    	position: relative;
+    	&:before {
+    		content: '';
+    		border: solid #fff;
+    		border-width: 0 1px 1px 0;
+    		display: inline-block;
+    		padding: 3px;
+    		transform: rotate(45deg);
+    		-webkit-transform: rotate(45deg);
+    		margin: -10px 22px 0px 0px;
+    		display: block;
+    	}
+    }
+
+    &-btn-arrow-right{
+        position: relative;
+        &:before {
+            content: '';
+            border: solid #fff;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            margin: -8px 24px 0px -4px;
+            display: block;
+        }
+    }
+}
