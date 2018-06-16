@@ -2,6 +2,7 @@ footer {
     // height: 60px;
     background-color: #000000;
     padding: 28px 0; // margin-top: 100px;
+    position: relative;
     .container {
         display: flex;
         align-items: center;
@@ -33,6 +34,26 @@ footer {
                     text-decoration: underline;
                 }
             }
+        }
+    }
+    .top-arrow {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        height: 30px;
+        width: 30px;
+        margin: auto;
+        transition: 0.2s    ;
+        cursor: pointer;
+        .icon {
+            transition: 0.2s;
+        }
+        &:hover {
+            .icon.icon-top-arrow {
+                background: url(img/long-arrow-pointing-up-white.svg) no-repeat;
+            }
+            background: $c-pink;
         }
     }
 }

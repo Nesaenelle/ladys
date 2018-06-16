@@ -8,18 +8,38 @@
     display: none;
 }
 
-@media screen and (max-width: 1280px) {
-    // .audience,
-    // .join-system,    
-    // .prosperity,
-    .sign-up, // .facts,
-    // .success,
-    .contacts {
-        display: none;
+@media screen and (max-width: 1600px) {
+    .top-block__info_title {
+        font-size: 30px;
+        line-height: 40px;
     }
+    .top-block__info_descr {
+        // margin-top: 20px;
+        line-height: 24px;
+    }
+    .top-block__info_wrapper {
+        padding: 100px 35px 100px 50px;
+    }
+    .sign-up__form_title h1 {
+        font-size: 64px;
+    }
+}
 
+@media screen and (max-width: 1400px) {
+    .sign-up__form_title h1 {
+        font-size: 56px;
+    }
+}
 
-
+@media screen and (max-width: 1280px) {
+    .top-block__info_descr {
+        margin-top: 20px;
+    }
+    .reasons__list_item_title {
+        font-size: 20px;
+        line-height: 22px;
+        margin-top: 36px;
+    }
     .audience {
         &__list {
             &_item {
@@ -38,7 +58,7 @@
         }
     }
     .join-system {
-        margin-top: 50px;
+        margin-top: 60px;
         .container {
             padding: 0 20px;
         }
@@ -78,7 +98,7 @@
     }
 
     .prosperity {
-        margin-top: 50px;
+        margin-top: 60px;
         &__list {
             align-items: initial;
             &_item {
@@ -87,6 +107,29 @@
                 padding: 20px;
                 border: none;
                 margin-top: 0px;
+                &[data-animate="true"] {
+                    &:nth-child(1) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(2) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(3) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(4) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                }
+                
                 .btn {
                     margin: 30px auto 0;
                     display: block;
@@ -108,27 +151,12 @@
             }
         }
     }
-    .sign-up {
-        .container {
-            flex-wrap: wrap;
-            min-height: auto;
-        }
-        &__form {
-            width: 100%;
-            padding: 70px 50px;
-            &_title {
-                h1 {
-                    font-size: 40px;
-                }
-            }
-            &_descr {
-                font-size: 20px;
-            }
-        }
-        &__bg {
-            height: 500px;
-            width: 100%;
-        }
+
+    .sign-up__form {
+        padding-left: 50px;
+    }
+    .sign-up__form_title h1 {
+        font-size: 48px;
     }
 
     .facts {
@@ -155,17 +183,58 @@
         }
     }
 
-    .slider {
-        &__wrapper {
-            // flex-wrap: wrap;
+    .success {
+        margin-top: 60px;
+        .container {
+            padding: 0 20px;
         }
-        &__item {
+    }
+
+    .slider {
+        display: none;
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__group{
+            width: calc(100%/2 - 20px);
+        }
+    }
+
+    .contacts {
+        margin-top: 60px;
+        .container {
             width: 100%;
+        }
+    }
+
+    footer {
+        .top-arrow {
+            // top: -50px;
+            display: none;
         }
     }
 }
 
+
+@media screen and (min-width: 980px) {
+    .dropdown-menu {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 980px) {
+    header {
+        .container {
+            padding: 0 20px;
+        }
+        .logo {
+
+            width: auto;
+        }
+        .hamburger {
+            display: block;
+        }
+    }
     .title {
         font-size: 36px;
         line-height: 52px;
@@ -176,26 +245,37 @@
     }
     .top-block {
         height: auto;
+        min-height: initial;
     }
     .top-block__info {
         width: 100%;
         position: static;
         align-items: initial;
         height: initial;
+
         &_title {
             padding: 0;
             font-size: 28px;
             line-height: 40px;
+            &[data-animate="true"] {
+                animation-delay: 1s;
+            }
         }
         &_descr {
             margin-top: 40px;
             width: 100%;
             text-align: center;
+            &[data-animate="true"] {
+                animation-delay: 1s;
+            }
         }
         .btn {
             margin: 40px auto 0;
             display: block;
             padding: 27px 30px;
+            &[data-animate="true"] {
+                animation-delay: 1s;
+            }
         }
         &_wrapper {
             width: 100%;
@@ -206,18 +286,39 @@
     .reasons {
         padding-top: 60px;
         .container {
-            padding: 0 10px;
+            padding: 0 20px;
         }
         &__list {
             margin-top: 60px;
             &_item {
-                padding-left: 50px;
+                padding-left: 55px;
                 width: 100%;
                 margin-bottom: 30px;
-
+                $c: &;
+                &[data-animate="true"] {
+                    &:nth-child(1) {
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(5) {
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(6) {
+                        animation-delay: 0s;
+                    }
+                }
                 &_title {
                     font-size: 20px;
                     line-height: 26px;
+                    margin-top: 10px;
                 }
                 &_descr {
                     width: 100%;
@@ -230,9 +331,33 @@
         }
     }
 
+    .sign-up {
+        .container {
+            flex-wrap: wrap;
+            min-height: auto;
+        }
+        &__form {
+            width: 100%;
+            padding: 70px 50px;
+            &_title {
+                h1 {
+                    font-size: 40px;
+                }
+            }
+            &_descr {
+                font-size: 20px;
+            }
+        }
+        &__bg {
+            height: 500px;
+            width: 100%;
+        }
+    }
+
     nav {
         display: none;
     }
+
     footer {
         .footer-links {
             width: 100%;
@@ -250,7 +375,9 @@
 }
 
 @media screen and (max-width: 600px) {
-
+    .top-block__info_title {
+        text-align: center;
+    }
     .audience {
         &__list {
             &_item {
@@ -298,6 +425,41 @@
         }
     }
 
+    .sign-up {
+        &__form {
+            padding: 20px;
+            form {
+                width: 100%;
+            }
+            &_title {
+                h1 {
+                    // text-align: center;
+                    font-size: 26px;
+                }
+                &:before {
+                    // left: 15px;
+                    top: 8px;
+                }
+            }
+            &_descr {
+                // text-align: center;  text-align: center;
+                line-height: 20px;
+            }
+            &_pre {
+                margin-top: 50px;
+            }
+            .btn {
+                margin: 30px auto 20px;
+                display: block;
+            }
+            &_input {
+                width: 100%;
+            }
+            .btn {
+                padding: 27px 30px;
+            }
+        }
+    }
 
     .facts {
         &__counter {
@@ -306,6 +468,12 @@
                 margin-bottom: 20px;
                 flex-wrap: wrap;
                 flex-direction: column-reverse;
+                $c: &;
+                transform: translateY(100px);
+                &[data-animate="true"] #{$c}_amount {
+                    transform: translateY(0);
+                    // visibility: visible;
+                }
                 &_title,
                 &_descr,
                 &_amount {
@@ -316,7 +484,7 @@
                 }
                 &_amount {
                     font-size: 72px;
-                    line-height: 72px;
+                    line-height: 72px; 
                 }
                 &_more {
                     text-align: center;
@@ -336,10 +504,49 @@
             }
         }
     }
+
+    .contacts {
+        margin-bottom: 20px;
+        .container {
+            width: 100%;
+        }
+        &__img {
+            max-width: 100%;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        &__info {
+            width: 100%;
+            padding: 20px;
+            position: static;
+            &_name {
+                text-align: center;
+            }
+            &_text {
+                // text-align: center;
+            }
+        }
+    }
+    .success {
+        .container {
+            padding: 0;
+        }
+    }
+    // .slider {
+
+    //     &__wrapper {
+    //         flex-wrap: wrap;
+    //     }
+    //     &__item {
+    //         width: calc(100%);
+    //     }
+    // }
 }
 
 @media screen and (max-width: 480px) {
     .title h1 {
-         font-size: 26px; 
+        font-size: 26px;
     }
 }

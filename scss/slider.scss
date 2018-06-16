@@ -3,40 +3,77 @@
     position: relative;
     height: 427px;
     &__wrapper {
+        position: relative; // overflow: hidden;
+        // padding-top: 50px;
+        // padding-bottom: 50px;
+    }
+    &__scroller {
         display: flex;
         justify-content: space-between;
+        transition: 0.2s;
+    }
+    &__arrows {
+        &_left,
+        &_right {
+            position: absolute;
+            top: -120px;
+            bottom: 0;
+            margin: auto;
+            width: 23px;
+            height: 23px;
+            background: red;
+            background-size: cover!important;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        &_left {
+            left: -35px;
+            transform: rotate(-90deg);
+            background: url(img/long-arrow-pointing-black.svg);
+            &:hover {
+                background: url(img/long-arrow-pointing-black-active.svg);
+            }
+        }
+        &_right {
+            right: -35px;
+            transform: rotate(90deg);
+            background: url(img/long-arrow-pointing-black.svg);
+            &:hover {
+                background: url(img/long-arrow-pointing-black-active.svg);
+            }
+        }
     }
     &__controls {
-    	display: flex;
-    	justify-content: center;
-    	position: absolute;
-    	bottom: 22px;
-    	width: 200px;
-    	margin: auto;
-    	left:0;
-    	right: 0;
-    	align-items: center;
-    	&_item {
-    		width: 6px;
-    		height: 6px;
-    		background: #fe90b0;
-    		border-radius: 100%;
-    		margin: 0 10px;
-    		transition: 0.2s;
-    		cursor: pointer;
-    		&.active {
-    			transform: scale(1.7);
-    			background: #ed2984;
-    		}
-    	}
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 22px;
+        width: 200px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        align-items: center;
+        &_item {
+            width: 6px;
+            height: 6px;
+            background: #fe90b0;
+            border-radius: 100%;
+            margin: 0 10px;
+            transition: 0.2s;
+            cursor: pointer;
+            &.active {
+                transform: scale(1.7);
+                background: #ed2984;
+            }
+        }
     }
-    &__item {
-        width: calc(100%/3 - 20px);
-        position: relative;
+    &__group {
         height: 285px;
-        background: #fe90b0;
-        padding: 0 33px;	
-        // box-shadow: 0 20px 50px -10px #000;
+        width: 100%;
+        margin: 0 20px;
+        position: relative;
+        width: calc(100%/3 - 20px);
+        z-index: 1;
         &:before {
             content: '';
             position: absolute;
@@ -61,17 +98,30 @@
             background: #c26e87;
             height: 93%;
         }
+    }
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: none; // height: 285px;
+        background: #fe90b0;
+        padding: 0 33px; // box-shadow: 0 20px 50px -10px #000;
+        &.active {
+            display: block;
+        }
+
         &_descr {
-        	font-size: 16px;
-        	color: #fff;
-        	margin-top: 74px;
-        	text-align: center;
-        	line-height: 24px;
+            font-size: 16px;
+            color: #fff;
+            margin-top: 74px;
+            text-align: center;
+            line-height: 24px;
         }
         &_name {
-        	margin-top: 22px;
-        	font-weight: 600;
-        	text-align: center;
+            margin-top: 22px;
+            font-weight: 600;
+            text-align: center;
         }
         img {
             position: absolute;
@@ -81,4 +131,27 @@
             top: -56px;
         }
     }
+}
+
+
+
+
+@keyframes slideOutUp {
+    from {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(-50%, -100%, 0) rotate(-245deg) scale(0);
+        opacity: 0.8;
+    }
+}
+
+.slideOutUp {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: slideOutUp;
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
