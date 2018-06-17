@@ -1,6 +1,6 @@
 body {
     font-family: 'Rubik', sans-serif;
-    min-width: 320px; // overflow-x: hidden;
+    min-width: 300px; // overflow-x: hidden;
 }
 
 a {
@@ -81,18 +81,30 @@ h1 {
         right: 0;
         top: 0;
         width: 50%;
-        background: rgba(255, 255, 255, 0.85);
         height: 100%;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
 
-        transform: translateX(100%);
-        transition: 1s ease;
-
+        // transform: translateX(100%);
+        // transition: 1s ease;
+                 animation-fill-mode: forwards;
         $c: &;
-        &[data-animate="true"] {
-            transform: translateX(0);
+        &:before {
+            content: '';
+            background: rgba(255, 255, 255, 0.85);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        &[data-animate="true"]:before{
+            // transform: translateX(0);
+
+            animation-duration: 1s;
+            animation-name: slideinRight;
         }
 
         &_wrapper {
@@ -107,9 +119,9 @@ h1 {
             opacity: 0;
             animation-fill-mode: forwards;
             &[data-animate="true"] {
-                animation-duration: 1s;
-                animation-name: slidein;
-                animation-delay: 1s;
+                animation-duration: 1.5s;
+                animation-name: slideinRight;
+                // animation-delay: 1s;
             }
 
             b {
@@ -134,9 +146,9 @@ h1 {
             line-height: 29px;
             animation-fill-mode: forwards;
             &[data-animate="true"] {
-                animation-duration: 1s;
-                animation-name: slidein;
-                animation-delay: 1.5s;
+                animation-duration: 2s;
+                animation-name: slideinRight;
+                // animation-delay: 1.5s;
             }
         }
         .btn {
@@ -145,9 +157,9 @@ h1 {
             margin-top: 22px;
             padding: 27px 74px;
             &[data-animate="true"] {
-                animation-duration: 1s;
+                animation-duration: 2.5s;
                 animation-name: slidein;
-                animation-delay: 2s;
+                animation-delay: 0.3s;
             }
         }
     }
@@ -795,6 +807,7 @@ h1 {
 
 .success {
     margin-top: 192px;
+    overflow: hidden;
     .container {
         padding: 0 88px;
         max-width: initial;
@@ -919,6 +932,21 @@ h1 {
         visibility: visible;
     }
 }
+
+@keyframes slideinDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 
 @keyframes slideinRight {
     from {

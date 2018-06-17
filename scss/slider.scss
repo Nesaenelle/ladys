@@ -6,11 +6,11 @@
         position: relative; // overflow: hidden;
         // padding-top: 50px;
         // padding-bottom: 50px;
+        // height: 427px;
     }
     &__scroller {
         display: flex;
-        justify-content: space-between;
-        transition: 0.2s;
+        justify-content: space-between; // transition: 0.2s; // height: 427px;
     }
     &__arrows {
         &_left,
@@ -55,7 +55,9 @@
         align-items: center;
         &_item {
             width: 6px;
+            min-width: 6px;
             height: 6px;
+            min-height: 6px;
             background: #fe90b0;
             border-radius: 100%;
             margin: 0 10px;
@@ -67,13 +69,43 @@
             }
         }
     }
-    &__group {
-        height: 285px;
-        width: 100%;
-        margin: 0 20px;
+
+    &__item {
+
         position: relative;
         width: calc(100%/3 - 20px);
-        z-index: 1;
+        height: 285px;
+        display: none;
+        >div {
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            padding: 0 33px;
+            background: #fe90b0;
+        }
+        &.slideOutUpLeft, &.slideOutUpRight {
+            z-index: 1000;
+            position: absolute;
+
+
+            &:after,
+            &:before {
+                content: none;
+            }
+            &:nth-child(3n + 1) {
+                margin-left: 0;
+            }
+            &:nth-child(3n + 2) {
+                margin-left: calc(100%/3 + 15px);
+            }
+            &:nth-child(3n + 3) {
+                margin-left: calc((100%/3)*2 + 15px);
+            }
+        }
+
         &:before {
             content: '';
             position: absolute;
@@ -98,17 +130,15 @@
             background: #c26e87;
             height: 93%;
         }
-    }
-    &__item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        display: none; // height: 285px;
-        background: #fe90b0;
-        padding: 0 33px; // box-shadow: 0 20px 50px -10px #000;
         &.active {
             display: block;
+
+            &:not(.slideOutUpLeft) > div,  &:not(.slideOutUpRight) > div{
+                animation-duration: 1s;
+                animation-fill-mode: both;
+                animation-name: scaleIn;
+                transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+            }
         }
 
         &_descr {
@@ -136,7 +166,7 @@
 
 
 
-@keyframes slideOutUp {
+@keyframes slideOutUpLeft {
     from {
         transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
         opacity: 1;
@@ -144,14 +174,52 @@
 
     to {
         visibility: hidden;
-        transform: translate3d(-50%, -100%, 0) rotate(-245deg) scale(0);
-        opacity: 0.8;
+        transform: translate3d(-50%, -100%, 0) rotate(-45deg) scale(0.7);
+        opacity: 0;
     }
 }
 
-.slideOutUp {
-    animation-duration: 2s;
+@keyframes slideOutUpRight {
+    from {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(50%, -100%, 0) rotate(45deg) scale(0.7);
+        opacity: 0;
+    }
+}
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.98) translateY(8px);
+    }
+
+    to {
+        transform: scale(1) translateY(0px);
+    }
+}
+
+.scaleIn {
+    animation-duration: 1s;
     animation-fill-mode: both;
-    animation-name: slideOutUp;
+    animation-name: scaleIn;
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.slideOutUpLeft {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideOutUpLeft;
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+.slideOutUpRight {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideOutUpRight;
     transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
