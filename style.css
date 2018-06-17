@@ -821,7 +821,7 @@ h1 {
       .reasons__list_item:nth-child(5) .reasons__list_item_img:after {
         background: url(img/world_travel.svg) no-repeat; }
       .reasons__list_item:nth-child(6) .reasons__list_item_img:after {
-        background: url(img/official_work.svg) no-repeat; }
+        background: url(img/team.svg) no-repeat; }
       .reasons__list_item_img {
         border-radius: 100%;
         width: 110px;
