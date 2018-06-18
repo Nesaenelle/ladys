@@ -1,6 +1,8 @@
 body {
     font-family: 'Rubik', sans-serif;
     min-width: 300px; // overflow-x: hidden;
+    animation-duration: 2s;
+    animation-name: initialize;
 }
 
 a {
@@ -84,11 +86,9 @@ h1 {
         height: 100%;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
-
-        // transform: translateX(100%);
+        flex-wrap: wrap; // transform: translateX(100%);
         // transition: 1s ease;
-                 animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
         $c: &;
         &:before {
             content: '';
@@ -100,9 +100,8 @@ h1 {
             height: 100%;
             z-index: 0;
         }
-        &[data-animate="true"]:before{
+        &[data-animate="true"]:before {
             // transform: translateX(0);
-
             animation-duration: 1s;
             animation-name: slideinRight;
         }
@@ -120,8 +119,7 @@ h1 {
             animation-fill-mode: forwards;
             &[data-animate="true"] {
                 animation-duration: 1.5s;
-                animation-name: slideinRight;
-                // animation-delay: 1s;
+                animation-name: slideinRight; // animation-delay: 1s;
             }
 
             b {
@@ -147,8 +145,7 @@ h1 {
             animation-fill-mode: forwards;
             &[data-animate="true"] {
                 animation-duration: 2s;
-                animation-name: slideinRight;
-                // animation-delay: 1.5s;
+                animation-name: slideinRight; // animation-delay: 1.5s;
             }
         }
         .btn {
@@ -338,7 +335,7 @@ h1 {
             width: calc(100%/4);
             position: relative;
             $c: &;
-            padding: 120px 6% 115px 6%;
+            padding: 120px 5% 115px 5%;
             border-right: 1px solid #333333;
             transition: 1s ease;
             transform: scale(0.6);
@@ -374,7 +371,7 @@ h1 {
             }
             &_title {
                 margin-top: 42px;
-                font-size: 30px;
+                font-size: 26px;
 
                 font-weight: 600;
                 color: $c-pink;
@@ -412,38 +409,38 @@ h1 {
             align-items: center;
             margin-top: 80px;
             $c: &;
-             
-            &:nth-child(1) #{$c}_info[data-animate="true"]{
+
+            &:nth-child(1) #{$c}_info[data-animate="true"] {
                 animation-duration: 1s;
                 animation-name: slideinRight;
                 animation-delay: 0s;
             }
-            &:nth-child(2) #{$c}_info[data-animate="true"]{
+            &:nth-child(2) #{$c}_info[data-animate="true"] {
                 animation-duration: 1s;
                 animation-name: slideinRight;
                 animation-delay: 0.3s;
             }
-            &:nth-child(3) #{$c}_info[data-animate="true"]{
+            &:nth-child(3) #{$c}_info[data-animate="true"] {
                 animation-duration: 1s;
                 animation-name: slideinRight;
                 animation-delay: 0.6s;
             }
-            &:nth-child(4) #{$c}_info[data-animate="true"]{
+            &:nth-child(4) #{$c}_info[data-animate="true"] {
                 animation-duration: 1s;
                 animation-name: slideinRight;
                 animation-delay: 0s;
             }
-            &:nth-child(5) #{$c}_info[data-animate="true"]{
+            &:nth-child(5) #{$c}_info[data-animate="true"] {
                 animation-duration: 1s;
                 animation-name: slideinRight;
                 animation-delay: 0.3s;
             }
-            &:nth-child(6) #{$c}_info[data-animate="true"]{
+            &:nth-child(6) #{$c}_info[data-animate="true"] {
                 animation-duration: 1s;
                 animation-name: slideinRight;
                 animation-delay: 0.6s;
             }
-            
+
             &:hover {
                 #{$c}_info {
                     background: #000;
@@ -469,8 +466,7 @@ h1 {
                 margin: auto;
                 background: #fff;
                 padding: 70px 36px 70px 50px;
-                position: relative;
-                // transition: 1s ease;
+                position: relative; // transition: 1s ease;
                 // visibility: hidden;
                 transform: translateX(200px);
                 opacity: 0;
@@ -480,10 +476,7 @@ h1 {
                 right: 0;
                 top: 0;
                 bottom: 0;
-                animation-fill-mode: forwards;
-              
-                // &[data-animate="true"] {
-
+                animation-fill-mode: forwards; // &[data-animate="true"] {
                 //     transform: translateX(0);
                 //     opacity: 1;
                 //     visibility: visible;
@@ -615,6 +608,9 @@ h1 {
 
 .sign-up {
     overflow: hidden;
+    &.secondary {
+        margin-top: 100px;
+    }
     .container {
         display: flex;
         padding: 0;
@@ -730,6 +726,7 @@ h1 {
         background-size: cover; // background-position: center;
         opacity: 0;
         animation-fill-mode: forwards;
+        border-top: 1px solid #f1f1f1;
         &[data-animate="true"] {
             animation-duration: 1s;
             animation-name: slideinRight;
@@ -890,7 +887,7 @@ h1 {
         width: 53%;
         margin: auto;
         background: #fff;
-        padding: 76px 36px 70px 63px;
+        padding: 76px 30px 70px 63px;
         position: relative;
         transition: 0.2s ease;
         opacity: 0;
@@ -909,12 +906,11 @@ h1 {
         }
         &_text {
             font-size: 18px;
-            margin-bottom: 14px;
-            // padding-left: 34px;
+            margin-bottom: 14px; // padding-left: 34px;
             cursor: pointer;
             display: flex;
             align-items: center;
-
+            white-space: nowrap;
             &:hover {
                 a {
                     color: $c-pink;
@@ -922,6 +918,14 @@ h1 {
             }
             .mdi {
                 margin-right: 17px;
+                &.mdi-skype {
+                    position: relative;
+                    top: 2px;
+                }
+                &.mdi-email {
+                    position: relative;
+                    top: 1px;
+                }
             }
             a {
                 position: relative;
@@ -930,6 +934,17 @@ h1 {
         }
     }
 }
+
+@keyframes initialize {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 
 @keyframes slidein {
