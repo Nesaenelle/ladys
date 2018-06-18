@@ -26,7 +26,7 @@ h1 {
     font-size: 48px;
     text-align: center;
     font-weight: 600;
-    line-height: 72px;
+    line-height: 1.5em;
     position: relative;
 
     &[data-animate="true"] {
@@ -52,6 +52,7 @@ h1 {
         opacity: 0;
         visibility: hidden;
         transition: 1s ease;
+        line-height: 1.5em;
     }
     &:before {
         content: '';
@@ -71,12 +72,12 @@ h1 {
 }
 
 .top-block {
-    background: url(img/main_screen_bg.png) no-repeat;
+    background: url(img/main_screen_bg.png) no-repeat center;
     height: 100vh;
     position: relative;
     background-size: cover;
     padding-top: 25px;
-    min-height: 800px;
+    min-height: 700px;
     overflow: hidden;
     &__info {
         position: absolute;
@@ -107,12 +108,12 @@ h1 {
         }
 
         &_wrapper {
-            width: 86%;
-            padding: 191px 50px 100px 130px;
+            width: 800px;
+            padding: 191px 30px 100px 130px;
         }
         &_title {
             font-size: 36px;
-            line-height: 54px;
+            line-height: 1.5em;
             position: relative;
             padding: 12px 0 5px 0;
             opacity: 0;
@@ -139,9 +140,9 @@ h1 {
             // transition: 1s ease;
             margin-top: 82px;
             font-size: 18px;
-            width: 80%;
+            // width: 80%;
             opacity: 0;
-            line-height: 29px;
+            line-height: 1.5em;
             animation-fill-mode: forwards;
             &[data-animate="true"] {
                 animation-duration: 2s;
@@ -296,7 +297,7 @@ h1 {
             }
             &_title {
                 font-size: 24px;
-                line-height: 34px;
+                line-height: 1.5em;
                 font-weight: 600;
                 margin-top: 20px;
                 position: relative;
@@ -305,7 +306,7 @@ h1 {
             &_descr {
                 margin-top: 21px;
                 font-size: 16px;
-                line-height: 24px;
+                line-height: 1.5em;
                 position: relative;
                 width: 90%;
             }
@@ -335,7 +336,7 @@ h1 {
             width: calc(100%/4);
             position: relative;
             $c: &;
-            padding: 120px 5% 115px 5%;
+            padding: 120px 5% 115px 121px;
             border-right: 1px solid #333333;
             transition: 1s ease;
             transform: scale(0.6);
@@ -380,7 +381,7 @@ h1 {
                 margin-top: 35px;
                 font-size: 16px;
                 color: #fff;
-                line-height: 24px;
+                line-height: 1.5em;
                 font-weight: 300;
             }
         }
@@ -391,7 +392,7 @@ h1 {
     margin-top: 121px;
     overflow: hidden;
     .container {
-        max-width: initial;
+        max-width: 1920px;
         padding: 0 85px;
     }
     &__list {
@@ -476,6 +477,7 @@ h1 {
                 right: 0;
                 top: 0;
                 bottom: 0;
+                transition: 1s;
                 animation-fill-mode: forwards; // &[data-animate="true"] {
                 //     transform: translateX(0);
                 //     opacity: 1;
@@ -487,13 +489,13 @@ h1 {
                     font-weight: 600;
                     color: #000;
                     transition: 0.2s ease;
-                    line-height: 24px;
+                    line-height: 1.5em;
                 }
                 &_descr {
                     margin-top: 22px;
                     font-size: 16px;
                     color: #fff;
-                    line-height: 24px;
+                    line-height: 1.5em;
                     color: #000;
                     transition: 0.2s ease;
                 }
@@ -523,7 +525,7 @@ h1 {
             // flex:wrap;
             // align-items: center;
             margin-top: 80px;
-            padding: 216px 65px 220px 6%;
+            padding: 214px 65px 220px 117px;
             border-right: 1px solid $c-pink-light;
             opacity: 0;
             visibility: hidden;
@@ -567,11 +569,11 @@ h1 {
             }
             &_number {
                 font-size: 270px;
-                top: 33px;
+                top: 36px;
                 position: absolute;
                 color: #ffd5e1;
                 line-height: 0;
-                left: -54px;
+                left: -79px;
                 z-index: -1;
                 transition: 0.2s ease;
             }
@@ -591,13 +593,13 @@ h1 {
                 font-weight: 600;
                 color: #000;
                 transition: 0.2s ease;
-                line-height: 34px;
+                line-height: 1.5em;
             }
             &_descr {
                 margin-top: 33px;
                 font-size: 16px;
                 color: #fff;
-                line-height: 24px;
+                line-height: 1.5em;
                 color: #000;
                 padding: 0 87px 0 0;
                 transition: 0.2s ease;
@@ -666,12 +668,12 @@ h1 {
             h1 {
                 font-size: 72px;
                 position: relative;
-                line-height: 81px; // word-break: break-all;
+                line-height: 1.5em; // word-break: break-all;
             }
         }
         &_descr {
             font-size: 30px;
-            line-height: 45px;
+            line-height: 1.5em;
             font-weight: 400;
             position: relative;
         }
@@ -679,6 +681,7 @@ h1 {
             margin-top: 88px;
             margin-bottom: 28px;
             font-size: 18px;
+            line-height: 1.5em;
         }
         .btn {
             padding: 26px 72px;
@@ -791,7 +794,7 @@ h1 {
             &_descr {
                 text-align: right;
                 margin-top: 14px;
-                line-height: 23px;
+                line-height: 1.5em;
             }
             &_amount {
                 line-height: 115px;
@@ -847,6 +850,7 @@ h1 {
         font-size: 16px;
         margin-top: 24px;
         text-align: center;
+        line-height: 1.5em;
     }
 }
 

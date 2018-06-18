@@ -1,9 +1,28 @@
+.is-not-on-top {
+    header {
+
+        nav ul li {
+            padding: 20px 0;
+        }
+
+        .logo img {
+            max-width: 40px;
+        }
+    }
+
+     .hamburger.active + .dropdown-menu { 
+        top: 50px;
+    }
+}
+
 header {
     width: 100%;
     top: 25px;
     position: fixed;
     z-index: 100;
     padding: 0 20px;
+
+
     .container {
         display: flex;
         align-items: center;
@@ -22,6 +41,7 @@ header {
         width: 185px;
         font-size: 0;
         img {
+            transition: 0.2s;
             max-width: 60px;
             width: 100%;
         }
@@ -48,6 +68,7 @@ header {
                 padding: 32px 0;
                 cursor: pointer;
                 white-space: nowrap;
+                transition: 0.2s;
                 a {
                     color: #fff;
                     display: block;
@@ -56,6 +77,9 @@ header {
                     font-weight: 500;
                     letter-spacing: 1.4px;
                     transition: 0.2s;
+                    &.active {
+                        color: $c-pink;
+                    }
                 }
                 &:hover {
                     a {
@@ -82,14 +106,14 @@ header {
         &.active {
             span {
                 background: none;
-                &:before { 
+                &:before {
                     top: 0px;
                     -webkit-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
                     -o-transform: rotate(45deg);
                     transform: rotate(45deg);
                 }
-                &:after { 
+                &:after {
                     top: 0px;
                     -webkit-transform: rotate(-45deg);
                     -ms-transform: rotate(-45deg);
@@ -163,12 +187,16 @@ header {
         left: 0;
         top: 20px;
         transition: 0.2s;
+        box-shadow: 0 0 30px -5px #000;
         ul {
             li {
                 a {
-                    padding: 10px;
+                    padding: 20px;
                     display: block;
                     text-align: center;
+                    &.active {
+                        color: $c-pink;
+                    }
                 }
             }
         }

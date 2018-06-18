@@ -15,12 +15,19 @@ var Events = function() {
 var fn = new Events();
 var goTopBtn = document.querySelector('#go-top');
 
+
 window.addEventListener('scroll', function(e) {
     fn.trigger(e);
     if (window.scrollY > 300) {
         goTopBtn.classList.add('opened');
     } else {
         goTopBtn.classList.remove('opened');
+    }
+
+    if (window.scrollY > 50) {
+        document.body.classList.add('is-not-on-top');
+    } else {
+        document.body.classList.remove('is-not-on-top');
     }
 });
 
@@ -352,13 +359,13 @@ function isInViewport(el, offset = 0) {
 }());
 
 (function() {
-    var signInBtns = document.querySelectorAll('.js-popup');
+    var popupBtn = document.querySelectorAll('.js-popup');
     var modalOverlay = document.querySelector('#modal-overlay');
     var modal = document.querySelector('#modal-popup');
     var closeBtns = document.querySelectorAll('.js-close-modal');
 
-    if (signInBtns.length) {
-        signInBtns.forEach(function(btn) {
+    if (popupBtn.length) {
+        popupBtn.forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 modalOverlay.classList.add('opened');
@@ -370,23 +377,56 @@ function isInViewport(el, offset = 0) {
     if (closeBtns.length) {
         closeBtns.forEach(function(btn) {
             btn.addEventListener('click', function(e) {
-                modal.classList.add('hidden');
-                modalOverlay.classList.add('hidden');
+                modal.classList.remove('opened');
+                modalOverlay.classList.remove('opened');
             });
         });
     }
 
     window.addEventListener('click', function(e) {
-        // modals.forEach(function(modal) {
         if (!modal.contains(e.target)) {
             modal.classList.remove('opened')
             modalOverlay.classList.remove('opened')
         }
-        // })
-
     }, false);
 }());
 
+
+
+(function() {
+    var tabs = document.querySelectorAll('[data-navigation]');
+    var links = document.querySelectorAll('[data-navigation-link]');
+
+    window.addEventListener('scroll', function() {
+        tabs.forEach(function(elem) {
+            if (isInViewport(elem, 100)) {
+                var id = elem.getAttribute('data-navigation');
+                var links = document.querySelectorAll('[data-navigation-link');
+                links.forEach(function(link) {
+                    if (link.getAttribute('data-navigation-link') === id) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, false);
+
+    // var interval;
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var id = this.getAttribute('data-navigation-link');
+            var elem = document.querySelector('[data-navigation="' + id + '"]');
+            var topOffset = this.getAttribute('data-navigation-offset') || 0;
+            if (elem) {
+                window.scroll({ top: offset(elem).top - topOffset, left: 0, behavior: 'smooth' });
+            }
+        }, false);
+    })
+
+}());
 
 
 fn.trigger();
