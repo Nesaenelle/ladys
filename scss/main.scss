@@ -338,7 +338,7 @@ h1 {
             width: calc(100%/4);
             position: relative;
             $c: &;
-            padding: 120px 50px 115px 6%;
+            padding: 120px 6% 115px 6%;
             border-right: 1px solid #333333;
             transition: 1s ease;
             transform: scale(0.6);
@@ -412,6 +412,38 @@ h1 {
             align-items: center;
             margin-top: 80px;
             $c: &;
+             
+            &:nth-child(1) #{$c}_info[data-animate="true"]{
+                animation-duration: 1s;
+                animation-name: slideinRight;
+                animation-delay: 0s;
+            }
+            &:nth-child(2) #{$c}_info[data-animate="true"]{
+                animation-duration: 1s;
+                animation-name: slideinRight;
+                animation-delay: 0.3s;
+            }
+            &:nth-child(3) #{$c}_info[data-animate="true"]{
+                animation-duration: 1s;
+                animation-name: slideinRight;
+                animation-delay: 0.6s;
+            }
+            &:nth-child(4) #{$c}_info[data-animate="true"]{
+                animation-duration: 1s;
+                animation-name: slideinRight;
+                animation-delay: 0s;
+            }
+            &:nth-child(5) #{$c}_info[data-animate="true"]{
+                animation-duration: 1s;
+                animation-name: slideinRight;
+                animation-delay: 0.3s;
+            }
+            &:nth-child(6) #{$c}_info[data-animate="true"]{
+                animation-duration: 1s;
+                animation-name: slideinRight;
+                animation-delay: 0.6s;
+            }
+            
             &:hover {
                 #{$c}_info {
                     background: #000;
@@ -438,8 +470,8 @@ h1 {
                 background: #fff;
                 padding: 70px 36px 70px 50px;
                 position: relative;
-                transition: 1s ease;
-                visibility: hidden;
+                // transition: 1s ease;
+                // visibility: hidden;
                 transform: translateX(200px);
                 opacity: 0;
                 height: 86%;
@@ -448,13 +480,14 @@ h1 {
                 right: 0;
                 top: 0;
                 bottom: 0;
+                animation-fill-mode: forwards;
               
-                &[data-animate="true"] {
+                // &[data-animate="true"] {
 
-                    transform: translateX(0);
-                    opacity: 1;
-                    visibility: visible;
-                }
+                //     transform: translateX(0);
+                //     opacity: 1;
+                //     visibility: visible;
+                // }
                 &_title {
                     margin-top: 28px;
                     font-size: 18px;
@@ -877,7 +910,7 @@ h1 {
         &_text {
             font-size: 18px;
             margin-bottom: 14px;
-            padding-left: 34px;
+            // padding-left: 34px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -886,29 +919,9 @@ h1 {
                 a {
                     color: $c-pink;
                 }
-                .icon {
-                    &-skype {
-                        background: url(img/skype-logo-active.svg) no-repeat;
-                    }
-                    &-phone {
-                        background: url(img/end-call-button-active.svg) no-repeat;
-                    }
-                    &-email {
-                        background: url(img/black-envelope-active.svg) no-repeat;
-                    }
-                }
             }
-            .icon {
-                position: absolute;
-                left: -35px;
-                transition: 0.3s;
-                top: 4px;
-                &-phone {
-                    left: -36px;
-                }
-                &-skype {
-                    left: -34px;
-                }
+            .mdi {
+                margin-right: 17px;
             }
             a {
                 position: relative;

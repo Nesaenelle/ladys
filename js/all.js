@@ -12,13 +12,16 @@ var Events = function() {
 
 
 
-var moving = false;
 var fn = new Events();
-
+var goTopBtn = document.querySelector('#go-top');
 
 window.addEventListener('scroll', function(e) {
     fn.trigger(e);
-    moving = true;
+    if (window.scrollY > 300) {
+        goTopBtn.classList.add('opened');
+    } else {
+        goTopBtn.classList.remove('opened');
+    }
 });
 
 
@@ -95,9 +98,10 @@ function isInViewport(el, offset = 0) {
     var slidesToShow = 3;
     var isWorking = false;
     var TOTALCOUNT = 0;
+    var interval;
 
 
-    initialize();
+    onResize();
 
     function getTotalCount() {
         TOTALCOUNT = Math.ceil((slides.length / slidesToShow));
@@ -160,6 +164,7 @@ function isInViewport(el, offset = 0) {
 
     function refresh() {
         curSlide = 0;
+        autoScroll();
         getTotalCount();
         drowControls();
         slides.forEach(function(slide, i) {
@@ -174,10 +179,20 @@ function isInViewport(el, offset = 0) {
         });
     }
 
+    function autoScroll() {
+        if(interval) clearInterval(interval);
+        interval = setInterval(function() {
+            goTo(curSlide + 1);
+        }, 6000);
+    }
 
-    // setInterval(function() {
-    //     goTo(curSlide + 1);
-    // }, 8000)
+    slider.addEventListener('mouseenter', function(){
+        clearInterval(interval);
+    }, false);
+
+    slider.addEventListener('mouseleave', function(){
+        autoScroll();
+    }, false);
 
     controlLeft.addEventListener('click', function() {
         goTo(curSlide - 1);
@@ -187,7 +202,7 @@ function isInViewport(el, offset = 0) {
     }, false);
 
 
-    function initialize() {
+    function onResize() {
         if (window.innerWidth > 1400) {
             slidesToShow = 3;
             refresh();
@@ -201,7 +216,7 @@ function isInViewport(el, offset = 0) {
     }
 
     window.addEventListener('resize', function() {
-        initialize();
+        onResize();
     }, false);
 
 

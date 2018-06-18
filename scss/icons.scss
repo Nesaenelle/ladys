@@ -1,67 +1,67 @@
 .icon {
     display: inline-block;
 
-    &-btn-arrow-down {
-        position: relative;
-        &:before {
-            content: '';
-            border: solid #fff;
-            border-width: 0 1px 1px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            margin: -10px 22px 0px 0px;
-            display: block;
-        }
-    }
+    // &-btn-arrow-down {
+    //     position: relative;
+    //     &:before {
+    //         content: '';
+    //         border: solid #fff;
+    //         border-width: 0 1px 1px 0;
+    //         display: inline-block;
+    //         padding: 3px;
+    //         transform: rotate(45deg);
+    //         -webkit-transform: rotate(45deg);
+    //         margin: -10px 22px 0px 0px;
+    //         display: block;
+    //     }
+    // }
 
-    &-btn-arrow-right {
-        position: relative;
-        &:before {
-            content: '';
-            border: solid #fff;
-            border-width: 0 1px 1px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-            margin: -8px 24px 0px -4px;
-            display: block;
-        }
-    }
+    // &-btn-arrow-right {
+    //     position: relative;
+    //     &:before {
+    //         content: '';
+    //         border: solid #fff;
+    //         border-width: 0 1px 1px 0;
+    //         display: inline-block;
+    //         padding: 3px;
+    //         transform: rotate(-45deg);
+    //         -webkit-transform: rotate(-45deg);
+    //         margin: -8px 24px 0px -4px;
+    //         display: block;
+    //     }
+    // }
 
-    &-skype {
-        background: url(img/skype-logo.svg) no-repeat;
-        background-size: cover!important;
-        width: 14px;
-        height: 14px;
-        margin-right: 15px;
-    }
+    // &-skype {
+    //     background: url(img/skype-logo.svg) no-repeat;
+    //     background-size: cover!important;
+    //     width: 14px;
+    //     height: 14px;
+    //     margin-right: 15px;
+    // }
 
-    &-email {
-        background: url(img/black-envelope.svg) no-repeat;
-        background-size: cover!important;
-        width: 16px;
-        height: 16px;
-        margin-right: 15px;
-    }
+    // &-email {
+    //     background: url(img/black-envelope.svg) no-repeat;
+    //     background-size: cover!important;
+    //     width: 16px;
+    //     height: 16px;
+    //     margin-right: 15px;
+    // }
 
-    &-phone {
-        background: url(img/end-call-button.svg) no-repeat;
-        background-size: cover!important;
-        width: 17px;
-        height: 17px;
-        margin-right: 15px;
+    // &-phone {
+    //     background: url(img/end-call-button.svg) no-repeat;
+    //     background-size: cover!important;
+    //     width: 17px;
+    //     height: 17px;
+    //     margin-right: 15px;
 
-        transform: rotate(-130deg);
-    }
+    //     transform: rotate(-130deg);
+    // }
 
-    &-top-arrow {
-        background: url(img/long-arrow-pointing-up.svg) no-repeat;
-        background-size: cover!important;
-        width: 17px;
-        height: 17px;
-        @include absolute-center;
-    }
+    // &-top-arrow {
+    //     background: url(img/long-arrow-pointing-up.svg) no-repeat;
+    //     background-size: cover!important;
+    //     width: 17px;
+    //     height: 17px;
+    //     @include absolute-center;
+    // }
 }

@@ -18,6 +18,12 @@ footer {
         color: #ffffff;
         &__company {
             color: $c-pink;
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
@@ -36,24 +42,41 @@ footer {
             }
         }
     }
-    .top-arrow {
-        position: absolute;
-        right: 20px;
-        top: 0;
-        bottom: 0;
-        height: 30px;
-        width: 30px;
-        margin: auto;
-        transition: 0.2s    ;
-        cursor: pointer;
-        .icon {
-            transition: 0.2s;
+}
+
+.top-arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    transition: 0.2s;
+    cursor: pointer;
+    opacity: 0;
+    visibility: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+    .mdi {
+        color: #ed2984;
+        font-size: 18px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        transition: 0.2s;
+    }
+    &:hover {
+        .mdi {
+            color: white;
         }
-        &:hover {
-            .icon.icon-top-arrow {
-                background: url(img/long-arrow-pointing-up-white.svg) no-repeat;
-            }
-            background: $c-pink;
-        }
+        background: $c-pink;
     }
 }

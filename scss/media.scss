@@ -9,6 +9,12 @@
 }
 
 @media screen and (max-width: 1600px) {
+    .audience__list_item {
+        padding: 120px 4% 115px 4%;
+        &_title {
+            font-size: 24px;
+        }
+    }
     .top-block__info_title {
         font-size: 30px;
         line-height: 40px;
@@ -22,6 +28,10 @@
     }
     .sign-up__form_title h1 {
         font-size: 64px;
+    }
+
+    .prosperity__list_item_descr {
+        padding: 0 25px 0 0;
     }
 
     .join-system__list_item_info {
@@ -56,15 +66,23 @@
         }
         &__item {
             width: calc(100%/2 - 20px);
-            &.slideOutUpLeft, &.slideOutUpRight {
+            &.slideOutUpLeft,
+            &.slideOutUpRight {
                 &:nth-child(2n + 1) {
                     margin-left: 0;
+                    animation-delay: 0s;
                 }
                 &:nth-child(2n + 2) {
                     margin-left: calc(100%/2 + 15px);
+                    animation-delay: 0s;
                 }
             }
         }
+    }
+
+
+    .success {
+        margin-top: 60px;
     }
 }
 
@@ -106,6 +124,25 @@
                 margin-top: 40px;
                 width: 48%;
                 $c: &;
+                &:nth-child(1) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(2) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0.3s;
+                }
+                &:nth-child(3) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(4) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0.3s;
+                }
+                &:nth-child(5) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(6) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0.3s;
+                }
+
                 &:hover {
                     #{$c}_info {
                         background: #fff;
@@ -136,50 +173,53 @@
         margin-top: 60px;
         &__list {
             align-items: initial;
+            margin-top: 0;
             &_item {
-                width: 50%;
+                // width: 50%;
                 height: auto;
-                padding: 20px;
-                border: none;
-                margin-top: 0px;
-                &[data-animate="true"] {
-                    &:nth-child(1) {
-                        animation-duration: 1s;
-                        animation-name: slidein;
-                        animation-delay: 0s;
-                    }
-                    &:nth-child(2) {
-                        animation-duration: 1s;
-                        animation-name: slidein;
-                        animation-delay: 0s;
-                    }
-                    &:nth-child(3) {
-                        animation-duration: 1s;
-                        animation-name: slidein;
-                        animation-delay: 0s;
-                    }
-                    &:nth-child(4) {
-                        animation-duration: 1s;
-                        animation-name: slidein;
-                        animation-delay: 0s;
-                    }
-                }
-
+                padding: 20px 10px; // border: none;
+                // margin-top: 0px;
+                // &[data-animate="true"] {
+                //     &:nth-child(1) {
+                //         animation-duration: 1s;
+                //         animation-name: slidein;
+                //         animation-delay: 0s;
+                //     }
+                //     &:nth-child(2) {
+                //         animation-duration: 1s;
+                //         animation-name: slidein;
+                //         animation-delay: 0s;
+                //     }
+                //     &:nth-child(3) {
+                //         animation-duration: 1s;
+                //         animation-name: slidein;
+                //         animation-delay: 0s;
+                //     }
+                //     &:nth-child(4) {
+                //         animation-duration: 1s;
+                //         animation-name: slidein;
+                //         animation-delay: 0s;
+                //     }
+                // }
                 .btn {
                     margin: 30px auto 0;
                     display: block;
                 }
                 &_number {
                     position: static;
-                    font-size: 200px;
+                    font-size: 140px;
                     line-height: initial;
                     text-align: center;
+                }
+                &_title {
+                    font-size: 20px;
                 }
                 &_title,
                 &_descr {
                     text-align: center;
                     padding: 0;
                 }
+
                 &_info {
                     position: static;
                 }
@@ -219,7 +259,6 @@
     }
 
     .success {
-        margin-top: 60px;
         .container {
             padding: 0 20px;
         }
@@ -233,11 +272,10 @@
         }
     }
 
-    footer {
-        .top-arrow {
-            // top: -50px;
-            display: none;
-        }
+
+    .top-arrow {
+        // top: -50px;
+        display: none;
     }
 }
 
@@ -278,7 +316,7 @@
         position: static;
         align-items: initial;
         height: initial;
-
+        padding-top: 80px;
         &_title {
             padding: 0;
             font-size: 28px;
@@ -361,6 +399,49 @@
         }
     }
 
+    .prosperity {
+        margin-top: 50px;
+        &__list {
+            align-items: initial;
+            &_item {
+                margin-top: 20px;
+                width: 100%;
+                border: none;
+                height: auto;
+                &[data-animate="true"] {
+                    &:nth-child(1) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(2) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(3) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                    &:nth-child(4) {
+                        animation-duration: 1s;
+                        animation-name: slidein;
+                        animation-delay: 0s;
+                    }
+                }
+                &_title {
+                    line-height: 22px;
+                }
+                &_descr {
+                    width: 80%;
+                    margin: 20px auto 0;
+                }
+            }
+        }
+    }
+
+
     .sign-up {
         .container {
             flex-wrap: wrap;
@@ -406,8 +487,10 @@
     .slider {
         &__item {
             width: 100%;
-            &.slideOutUpLeft, &.slideOutUpRight {
+            &.slideOutUpLeft,
+            &.slideOutUpRight {
                 margin-left: 0!important;
+                animation-delay: 0s;
             }
         }
     }
@@ -439,7 +522,25 @@
                 flex-wrap: wrap;
                 height: auto;
                 width: 100%;
-
+                $c: &;
+                &:nth-child(1) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(2) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(3) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(4) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(5) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
+                &:nth-child(6) #{$c}_info[data-animate="true"] {
+                    animation-delay: 0s;
+                }
                 &_img {
                     margin: auto;
                 }
@@ -452,19 +553,16 @@
                 }
             }
         }
-    }
-
-    .prosperity {
-        margin-top: 50px;
-        &__list {
-            align-items: initial;
-            &_item {
-                // margin-top: 20px;
-                width: 100%;
-            }
-        }
-    }
-
+    } // .prosperity {
+    //     margin-top: 50px;
+    //     &__list {
+    //         align-items: initial;
+    //         &_item {
+    //             // margin-top: 20px;
+    //             width: 100%;
+    //         }
+    //     }
+    // }
     .sign-up {
         &__form {
             padding: 20px;
@@ -586,6 +684,7 @@
             padding: 0;
         }
         header {
+            top: 0;
             padding: 0;
             .container {
                 padding: 0 20px;
