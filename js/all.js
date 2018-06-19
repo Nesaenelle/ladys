@@ -77,7 +77,7 @@ function isInViewport(el, offset = 0) {
 
     fn.on(function(e) {
         elements.forEach(function(elem) {
-            if (isInViewport(elem, 100)) {
+            if (isInViewport(elem, 90)) {
                 if (!elem.getAttribute('data-animate')) {
                     elem.setAttribute('data-animate', true);
                 }
@@ -210,7 +210,7 @@ function isInViewport(el, offset = 0) {
 
 
     function onResize() {
-        if (window.innerWidth > 1400) {
+        if (window.innerWidth > 1440) {
             slidesToShow = 3;
             refresh();
         } else if (window.innerWidth > 980) {
