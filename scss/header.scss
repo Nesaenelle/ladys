@@ -1,5 +1,6 @@
 .is-not-on-top {
     header {
+        height: 57px;
 
         nav ul li {
             padding: 20px 0;
@@ -10,7 +11,7 @@
         }
     }
 
-     .hamburger.active + .dropdown-menu { 
+    .hamburger.active+.dropdown-menu {
         top: 50px;
     }
 }
@@ -21,9 +22,10 @@ header {
     position: fixed;
     z-index: 100;
     padding: 0 20px;
-
-
+    height: 70px;
+transition: 0.2s;
     .container {
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;

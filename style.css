@@ -486,11 +486,12 @@ a {
     .btn-pink:hover {
       background: #d1126b; }
 
-.is-not-on-top header nav ul li {
-  padding: 20px 0; }
-
-.is-not-on-top header .logo img {
-  max-width: 40px; }
+.is-not-on-top header {
+  height: 57px; }
+  .is-not-on-top header nav ul li {
+    padding: 20px 0; }
+  .is-not-on-top header .logo img {
+    max-width: 40px; }
 
 .is-not-on-top .hamburger.active + .dropdown-menu {
   top: 50px; }
@@ -500,8 +501,11 @@ header {
   top: 25px;
   position: fixed;
   z-index: 100;
-  padding: 0 20px; }
+  padding: 0 20px;
+  height: 70px;
+  transition: 0.2s; }
   header .container {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -944,7 +948,6 @@ h1 {
     .join-system__list_item {
       width: calc(100%/3 - 15px);
       position: relative;
-      height: 445px;
       display: flex;
       align-items: center;
       margin-top: 80px; }
@@ -980,13 +983,15 @@ h1 {
           color: #fff; }
       .join-system__list_item_img {
         font-size: 0;
-        width: 100%;
-        max-width: 320px;
-        position: absolute; }
+        width: calc(50% + 100px);
+        max-width: 380px;
+        top: 0; }
         .join-system__list_item_img img {
-          width: 100%; }
+          width: 100%;
+          object-fit: cover;
+          object-position: center; }
       .join-system__list_item_info {
-        width: 57%;
+        width: 320px;
         margin: auto;
         background: #fff;
         padding: 70px 36px 70px 50px;
@@ -996,10 +1001,11 @@ h1 {
         height: 86%;
         margin: auto;
         position: absolute;
-        right: 0;
+        left: 42%;
         top: 0;
         bottom: 0;
         transition: 1s;
+        box-shadow: 15px 20px 42px -28px #00000036;
         animation-fill-mode: forwards; }
         .join-system__list_item_info_title {
           margin-top: 28px;
@@ -1088,7 +1094,7 @@ h1 {
         color: #fff;
         line-height: 1.5em;
         color: #000;
-        padding: 0 87px 0 0;
+        padding: 0 80px 0 0;
         transition: 0.2s ease; }
 
 .sign-up {
@@ -1767,12 +1773,43 @@ footer {
   display: none; }
 
 @media screen and (max-width: 1800px) {
-  .join-system__list_item_info {
-    width: 65%; }
   .sign-up__form_title h1 {
-    font-size: 62px; } }
+    font-size: 62px; }
+  .join-system {
+    margin-top: 60px; }
+    .join-system .container {
+      padding: 0 90px; }
+    .join-system__list {
+      justify-content: initial; }
+      .join-system__list_item {
+        margin-top: 40px;
+        width: 48%;
+        justify-content: center; }
+        .join-system__list_item:nth-child(1) .join-system__list_item_info[data-animate="true"] {
+          animation-delay: 0s; }
+        .join-system__list_item:nth-child(2) .join-system__list_item_info[data-animate="true"] {
+          animation-delay: 0.3s; }
+        .join-system__list_item:nth-child(3) .join-system__list_item_info[data-animate="true"] {
+          animation-delay: 0s; }
+        .join-system__list_item:nth-child(4) .join-system__list_item_info[data-animate="true"] {
+          animation-delay: 0.3s; }
+        .join-system__list_item:nth-child(5) .join-system__list_item_info[data-animate="true"] {
+          animation-delay: 0s; }
+        .join-system__list_item:nth-child(6) .join-system__list_item_info[data-animate="true"] {
+          animation-delay: 0.3s; }
+        .join-system__list_item:hover .join-system__list_item_info {
+          background: #fff; }
+          .join-system__list_item:hover .join-system__list_item_info_title {
+            color: initial; }
+          .join-system__list_item:hover .join-system__list_item_info_descr {
+            color: initial; }
+        .join-system__list_item_info {
+          left: 60%; }
+          .join-system__list_item_info_title {
+            margin-top: 0;
+            font-size: 17px; } }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1660px) {
   .audience__list_item {
     padding: 120px 4% 115px 4%; }
     .audience__list_item_title {
@@ -1783,45 +1820,10 @@ footer {
     padding: 100px 35px 100px 50px; }
   .prosperity__list_item_descr {
     padding: 0 25px 0 0; }
-  .join-system__list_item_info {
-    width: 75%; }
   .facts__counter > div {
     width: 80%; }
   .slider__item_descr {
-    margin-top: 68px; }
-  .join-system {
-    margin-top: 60px; }
-    .join-system .container {
-      padding: 0 20px; }
-    .join-system__list_item {
-      margin-top: 40px;
-      width: 48%; }
-      .join-system__list_item:nth-child(1) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(2) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0.3s; }
-      .join-system__list_item:nth-child(3) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(4) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0.3s; }
-      .join-system__list_item:nth-child(5) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(6) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0.3s; }
-      .join-system__list_item:hover .join-system__list_item_info {
-        background: #fff; }
-        .join-system__list_item:hover .join-system__list_item_info_title {
-          color: initial; }
-        .join-system__list_item:hover .join-system__list_item_info_descr {
-          color: initial; }
-      .join-system__list_item_info {
-        width: 60%;
-        padding-right: 5px; }
-        .join-system__list_item_info_title {
-          margin-top: 0;
-          font-size: 17px; }
-      .join-system__list_item_img {
-        position: static; } }
+    margin-top: 68px; } }
 
 @media screen and (max-width: 1440px) {
   .sign-up__form_title h1 {
@@ -1838,12 +1840,8 @@ footer {
     .slider__item.slideOutUpLeft:nth-child(2n + 2), .slider__item.slideOutUpRight:nth-child(2n + 2) {
       margin-left: calc(100%/2 + 15px);
       animation-delay: 0s; }
-  .join-system__list_item_info {
-    width: 60%;
-    padding-right: 20px;
-    max-width: 420px;
-    left: 250px;
-    right: auto; }
+  .join-system .container {
+    padding: 0 50px; }
   .audience__list_item_descr {
     font-size: 15px; }
   .prosperity__list_item_title {
@@ -1895,6 +1893,14 @@ footer {
           padding: 0; }
         .prosperity__list_item_info {
           position: static; }
+  .join-system__list_item_info {
+    max-width: 250px; }
+    .join-system__list_item_info_title {
+      font-size: 15px; }
+    .join-system__list_item_info_descr {
+      font-size: 14px; }
+  .join-system__list_item_img {
+    width: 270px; }
   .sign-up__form {
     padding-left: 50px; }
   .sign-up__form_title h1 {
@@ -1911,6 +1917,7 @@ footer {
       .facts__counter > div {
         width: 100%; }
     .facts__slide {
+      margin-top: 60px;
       width: 100%;
       padding: 0;
       display: flex;
@@ -1924,47 +1931,6 @@ footer {
   .top-arrow {
     display: none; } }
 
-@media screen and (max-width: 1128px) {
-  .join-system {
-    margin-top: 50px; }
-    .join-system__list_item {
-      margin-top: 20px;
-      flex-wrap: wrap;
-      height: auto;
-      width: 100%; }
-      .join-system__list_item:nth-child(1) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(2) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(3) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(4) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(5) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item:nth-child(6) .join-system__list_item_info[data-animate="true"] {
-        animation-delay: 0s; }
-      .join-system__list_item_img {
-        margin: auto;
-        max-width: 420px;
-        display: block; }
-      .join-system__list_item_info {
-        padding: 15px;
-        width: 100%;
-        position: relative;
-        top: -70px;
-        text-align: center;
-        left: auto;
-        right: auto; }
-        .join-system__list_item_info_title {
-          max-width: 450px;
-          margin: auto; }
-          .join-system__list_item_info_title br {
-            display: none; }
-        .join-system__list_item_info_descr {
-          max-width: 450px;
-          margin: auto; } }
-
 @media screen and (min-width: 980px) {
   .dropdown-menu {
     display: none; } }
@@ -1977,6 +1943,8 @@ footer {
       padding: 0 20px; }
     header .logo {
       width: auto; }
+      header .logo img {
+        padding: 5px; }
     header .hamburger {
       display: block; }
   .title {
@@ -2050,9 +2018,28 @@ footer {
         .reasons__list_item_img {
           width: 70px;
           height: 70px; }
-  .join-system__list_item_info {
-    margin: auto;
-    top: -25px; }
+  .join-system__list_item {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    width: 53%;
+    margin: 30px auto; }
+    .join-system__list_item:nth-child(1) .join-system__list_item_info[data-animate="true"] {
+      animation-delay: 0s; }
+    .join-system__list_item:nth-child(2) .join-system__list_item_info[data-animate="true"] {
+      animation-delay: 0s; }
+    .join-system__list_item:nth-child(3) .join-system__list_item_info[data-animate="true"] {
+      animation-delay: 0s; }
+    .join-system__list_item:nth-child(4) .join-system__list_item_info[data-animate="true"] {
+      animation-delay: 0s; }
+    .join-system__list_item:nth-child(5) .join-system__list_item_info[data-animate="true"] {
+      animation-delay: 0s; }
+    .join-system__list_item:nth-child(6) .join-system__list_item_info[data-animate="true"] {
+      animation-delay: 0s; }
+    .join-system__list_item_info {
+      left: 66%; }
+      .join-system__list_item_info_descr {
+        max-width: 450px; }
   .prosperity {
     margin-top: 50px; }
     .prosperity__list {
@@ -2081,7 +2068,7 @@ footer {
         .prosperity__list_item_title br {
           display: none; }
         .prosperity__list_item_descr {
-          width: 80%;
+          width: 60%;
           margin: 20px auto 0; }
   .sign-up.secondary {
     margin-top: 50px; }
@@ -2132,6 +2119,8 @@ footer {
     width: 70%; }
   .facts__slide_img:after {
     content: none; }
+  .join-system .container {
+    padding: 0 20px; }
   footer .footer-links {
     width: 100%;
     flex-wrap: wrap;
@@ -2149,6 +2138,23 @@ footer {
     padding: 30px 20px; }
     .audience__list_item_descr {
       text-align: center; }
+  .join-system__list_item {
+    width: 100%;
+    margin: auto; }
+    .join-system__list_item_img {
+      position: static;
+      margin: auto;
+      max-width: 300px;
+      display: block;
+      width: 100%; }
+    .join-system__list_item_info {
+      padding: 15px;
+      width: 100%;
+      position: relative;
+      top: -70px;
+      text-align: center;
+      left: auto;
+      right: auto; }
   .sign-up__form {
     padding: 20px; }
     .sign-up__form form {
@@ -2253,13 +2259,15 @@ footer {
       justify-content: center; } }
 
 @media screen and (max-width: 414px) {
+  .title h1 {
+    font-size: 33px; }
   .top-block__info_wrapper {
     padding: 30px 20px; }
   .top-block__info_title {
     width: 92%;
     margin: auto; }
   .top-block__info_descr {
-    font-size: 19px; }
+    font-size: 14px; }
   .reasons__list_item_descr {
     font-size: 14px; }
   .audience__list_item_descr {
@@ -2305,6 +2313,8 @@ footer {
     margin: 30px auto 0; } }
 
 @media screen and (max-width: 375px) {
+  .title h1 {
+    font-size: 30px; }
   .top-block__info_title {
     font-size: 21px;
     width: 100%; }
@@ -2323,6 +2333,8 @@ footer {
     width: 100%; } }
 
 @media screen and (max-width: 320px) {
+  .title h1 {
+    font-size: 25px; }
   .top-block__info_title {
     font-size: 18px; }
   .top-block__info_descr {
