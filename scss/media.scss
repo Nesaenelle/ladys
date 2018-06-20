@@ -18,7 +18,7 @@
     .join-system {
         margin-top: 60px;
         .container {
-            padding: 0 90px;
+            padding: 0 40px;
         }
         &__list {
             justify-content: initial;
@@ -428,11 +428,15 @@
 
     .join-system {
         // margin-top: 50px;
+        .container {
+                padding: 0 20px;
+        }
         &__list {
 
             &_item {
                 margin-top: 20px;
                 flex-wrap: wrap;
+                justify-content: initial;
                 height: auto;
                 width: 53%;
                 margin: 30px auto; // max-width: 420px;
@@ -458,7 +462,7 @@
                 }
                 &_img {}
                 &_info {
-                    left: 66%;
+                    left: 190px;
                     &_title {}
                     &_descr {
                         max-width: 450px; // margin: auto;
@@ -641,7 +645,7 @@
                 &_img {
                     position: static;
                     margin: auto;
-                    max-width: 300px;
+                    max-width: 315px;
                     display: block;
                     width: 100%;
                 }
@@ -653,6 +657,7 @@
                     text-align: center;
                     left: auto;
                     right: auto;
+                    max-width: 280px;
                     &_descr {
                         // margin: auto;
                     }

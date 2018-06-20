@@ -1778,7 +1778,7 @@ footer {
   .join-system {
     margin-top: 60px; }
     .join-system .container {
-      padding: 0 90px; }
+      padding: 0 40px; }
     .join-system__list {
       justify-content: initial; }
       .join-system__list_item {
@@ -2018,9 +2018,12 @@ footer {
         .reasons__list_item_img {
           width: 70px;
           height: 70px; }
+  .join-system .container {
+    padding: 0 20px; }
   .join-system__list_item {
     margin-top: 20px;
     flex-wrap: wrap;
+    justify-content: initial;
     height: auto;
     width: 53%;
     margin: 30px auto; }
@@ -2037,7 +2040,7 @@ footer {
     .join-system__list_item:nth-child(6) .join-system__list_item_info[data-animate="true"] {
       animation-delay: 0s; }
     .join-system__list_item_info {
-      left: 66%; }
+      left: 190px; }
       .join-system__list_item_info_descr {
         max-width: 450px; }
   .prosperity {
@@ -2144,7 +2147,7 @@ footer {
     .join-system__list_item_img {
       position: static;
       margin: auto;
-      max-width: 300px;
+      max-width: 315px;
       display: block;
       width: 100%; }
     .join-system__list_item_info {
@@ -2154,7 +2157,8 @@ footer {
       top: -70px;
       text-align: center;
       left: auto;
-      right: auto; }
+      right: auto;
+      max-width: 280px; }
   .sign-up__form {
     padding: 20px; }
     .sign-up__form form {
