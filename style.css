@@ -486,12 +486,14 @@ a {
     .btn-pink:hover {
       background: #d1126b; }
 
-.is-not-on-top header {
+.is-not-on-top header .container {
   height: 57px; }
-  .is-not-on-top header nav ul li {
-    padding: 20px 0; }
-  .is-not-on-top header .logo img {
-    max-width: 40px; }
+
+.is-not-on-top header nav ul li a {
+  padding: 20px 0; }
+
+.is-not-on-top header .logo img {
+  max-width: 40px; }
 
 .is-not-on-top .hamburger.active + .dropdown-menu {
   top: 50px; }
@@ -501,19 +503,19 @@ header {
   top: 25px;
   position: fixed;
   z-index: 100;
-  padding: 0 20px;
-  height: 70px;
-  transition: 0.2s; }
+  padding: 0 20px; }
   header .container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #1d1d1b;
-    box-shadow: 0 20px 50px -30px #000;
+    box-shadow: 0 20px 40px -25px #000;
     padding: 0px 40px;
     max-width: 1140px;
-    position: relative; }
+    position: relative;
+    height: 80px;
+    transition: 0.2s; }
   header .logo {
     width: 196px;
     font-size: 0;
@@ -537,7 +539,6 @@ header {
     header nav ul {
       display: flex; }
       header nav ul li {
-        padding: 32px 0;
         cursor: pointer;
         white-space: nowrap;
         transition: 0.2s; }
@@ -548,7 +549,8 @@ header {
           font-size: 14px;
           font-weight: 500;
           letter-spacing: 1.4px;
-          transition: 0.2s; }
+          transition: 0.2s;
+          padding: 32px 0; }
           header nav ul li a.active {
             color: #ed2984; }
         header nav ul li:hover a {
@@ -984,7 +986,7 @@ h1 {
       .join-system__list_item_img {
         font-size: 0;
         width: calc(50% + 100px);
-        max-width: 380px;
+        max-width: 320px;
         top: 0; }
         .join-system__list_item_img img {
           width: 100%;
@@ -1001,21 +1003,20 @@ h1 {
         height: 86%;
         margin: auto;
         position: absolute;
-        left: 42%;
+        left: 43%;
         top: 0;
         bottom: 0;
         transition: 1s;
-        box-shadow: 15px 20px 42px -28px #00000036;
         animation-fill-mode: forwards; }
         .join-system__list_item_info_title {
-          margin-top: 28px;
+          margin-top: 26px;
           font-size: 18px;
           font-weight: 600;
           color: #000;
           transition: 0.2s ease;
           line-height: 1.5em; }
         .join-system__list_item_info_descr {
-          margin-top: 22px;
+          margin-top: 18px;
           font-size: 16px;
           color: #fff;
           line-height: 1.5em;
@@ -1940,6 +1941,7 @@ footer {
     top: 0;
     padding: 0; }
     header .container {
+      height: 70px;
       padding: 0 20px; }
     header .logo {
       width: auto; }

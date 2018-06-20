@@ -458,7 +458,7 @@ h1 {
                 font-size: 0;
                 // width: 100%;
                 width: calc(50% + 100px);
-                max-width: 380px;
+                max-width: 320px;
                 // position: absolute;
                 top:0;
                 img {
@@ -479,18 +479,18 @@ h1 {
                 height: 86%;
                 margin: auto;
                 position: absolute;
-                left: 42%;
+                left: 43%;
                 top: 0;
                 bottom: 0;
                 transition: 1s;
-                box-shadow: 15px 20px 42px -28px #00000036;
+                // box-shadow: 15px 20px 42px -28px #00000036;
                 animation-fill-mode: forwards; // &[data-animate="true"] {
                 //     transform: translateX(0);
                 //     opacity: 1;
                 //     visibility: visible;
                 // }
                 &_title {
-                    margin-top: 28px;
+                    margin-top: 26px;
                     font-size: 18px;
                     font-weight: 600;
                     color: #000;
@@ -498,7 +498,7 @@ h1 {
                     line-height: 1.5em;
                 }
                 &_descr {
-                    margin-top: 22px;
+                    margin-top: 18px;
                     font-size: 16px;
                     color: #fff;
                     line-height: 1.5em;

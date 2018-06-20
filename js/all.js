@@ -414,17 +414,18 @@ function isInViewport(el, offset = 0) {
     }, false);
 
     // var interval;
-    links.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var id = this.getAttribute('data-navigation-link');
-            var elem = document.querySelector('[data-navigation="' + id + '"]');
-            var topOffset = this.getAttribute('data-navigation-offset') || 0;
-            if (elem) {
-                window.scroll({ top: offset(elem).top - topOffset, left: 0, behavior: 'smooth' });
-            }
-        }, false);
-    })
+    var body = $("html, body");
+
+    $('[data-navigation-link]').on('click', function(e){
+        e.preventDefault();
+        var id = this.getAttribute('data-navigation-link');
+        var elem = document.querySelector('[data-navigation="' + id + '"]');
+        var topOffset = this.getAttribute('data-navigation-offset') || 0;
+        if (elem) {console.log(offset(elem).top - topOffset);
+            body.stop().animate({scrollTop: offset(elem).top - topOffset}, 500);
+        }
+
+    });
 
 }());
 
