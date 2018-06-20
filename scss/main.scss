@@ -867,7 +867,7 @@ h1 {
     overflow: hidden;
     $c: &;
     .container {
-        width: 50%;
+        width: 70%;
         margin: auto;
         position: relative;
         &[data-animate="true"] {
@@ -889,13 +889,13 @@ h1 {
         visibility: hidden;
         transform: translateX(-200px);
         img {
-            width: 100%;
+            // width: 100%;
             max-width: 400px;
             max-height: 400px;
         }
     }
     &__info {
-        width: 53%;
+        width: 500px;
         margin: auto;
         background: #fff;
         padding: 76px 30px 70px 63px;
@@ -905,7 +905,8 @@ h1 {
         height: 86%;
         margin: auto;
         position: absolute;
-        right: 0;
+        // right: 0;
+        left: 352px;
         top: 0;
         bottom: 0;
         transition: 1s ease;

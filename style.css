@@ -1294,7 +1294,7 @@ h1 {
   margin-bottom: 120px;
   overflow: hidden; }
   .contacts .container {
-    width: 50%;
+    width: 70%;
     margin: auto;
     position: relative; }
     .contacts .container[data-animate="true"] .contacts__img,
@@ -1312,11 +1312,10 @@ h1 {
     visibility: hidden;
     transform: translateX(-200px); }
     .contacts__img img {
-      width: 100%;
       max-width: 400px;
       max-height: 400px; }
   .contacts__info {
-    width: 53%;
+    width: 500px;
     margin: auto;
     background: #fff;
     padding: 76px 30px 70px 63px;
@@ -1326,7 +1325,7 @@ h1 {
     height: 86%;
     margin: auto;
     position: absolute;
-    right: 0;
+    left: 352px;
     top: 0;
     bottom: 0;
     transition: 1s ease;
@@ -1819,7 +1818,7 @@ footer {
         .join-system__list_item_info {
           left: 240px; }
           .join-system__list_item_info_title {
-            font-size: 17px; } }
+            font-size: 18px; } }
 
 @media screen and (max-width: 1660px) {
   .audience__list_item {
@@ -2045,10 +2044,13 @@ footer {
     .prosperity__list {
       align-items: initial; }
       .prosperity__list_item {
-        margin-top: 20px;
+        margin-top: 80px;
         width: 100%;
         border: none;
-        height: auto; }
+        height: auto;
+        padding: 0; }
+        .prosperity__list_item:first-child {
+          margin-top: 20px; }
         .prosperity__list_item[data-animate="true"]:nth-child(1) {
           animation-duration: 1s;
           animation-name: slidein;
@@ -2065,10 +2067,23 @@ footer {
           animation-duration: 1s;
           animation-name: slidein;
           animation-delay: 0s; }
-        .prosperity__list_item_title br {
-          display: none; }
+        .prosperity__list_item_info {
+          position: static; }
+        .prosperity__list_item_number {
+          position: static;
+          text-align: center;
+          line-height: 192px; }
+        .prosperity__list_item_title {
+          text-align: center; }
+          .prosperity__list_item_title br {
+            display: none; }
+        .prosperity__list_item .btn {
+          margin: 36px auto 0;
+          display: block; }
         .prosperity__list_item_descr {
-          width: 50%;
+          padding: 0;
+          text-align: center;
+          width: 45%;
           margin: 20px auto 0; }
   .sign-up.secondary {
     margin-top: 80px; }
@@ -2078,11 +2093,14 @@ footer {
   .sign-up__form {
     width: 100%;
     padding: 120px 80px; }
+    .sign-up__form form {
+      width: 550px; }
     .sign-up__form_title h1 {
-      font-size: 40px; }
+      font-size: 56px; }
     .sign-up__form_descr {
-      font-size: 20px; }
+      font-size: 22px; }
     .sign-up__form_input {
+      width: 450px;
       padding: 27px 35px; }
   .sign-up__bg {
     height: 500px;
@@ -2094,9 +2112,25 @@ footer {
   .contacts {
     margin-top: 80px; }
   .success {
-    margin-top: 100px; }
-  .facts .container {
-    padding-top: 80px; }
+    margin-top: 80px; }
+  .facts {
+    margin-top: 80px;
+    padding-bottom: 20px; }
+    .facts .container {
+      flex-wrap: wrap;
+      padding-top: 60px; }
+    .facts__counter {
+      width: 100%; }
+      .facts__counter_item {
+        margin-bottom: 20px; }
+      .facts__counter > div {
+        width: 100%; }
+    .facts__slide {
+      margin-top: 60px;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center; }
   nav {
     display: none; }
   footer .footer-links__item {
@@ -2118,7 +2152,7 @@ footer {
         margin-left: 0 !important;
         animation-delay: 0s; }
     .slider .slider__controls {
-      bottom: 60px; } }
+      bottom: 40px; } }
 
 @media screen and (max-width: 980px) {
   .top-block__info_title {
@@ -2128,66 +2162,144 @@ footer {
   .audience__list_item {
     padding: 60px 55px; }
   .reasons__list_item_descr {
-    width: 91%; } }
+    width: 91%; }
+  .contacts .container {
+    width: 100%; } }
 
 @media screen and (max-width: 768px) {
+  .title h1 {
+    font-size: 28px; }
+  .top-block {
+    padding-top: 0; }
   .top-block__info_descr {
     font-size: 21px; }
+  .top-block__info_wrapper {
+    padding: 110px 25px; }
+  .reasons__list {
+    margin-top: 60px; }
+  .reasons__list_item {
+    margin-bottom: 40px; }
   .reasons__list_item_descr {
     font-size: 16px; }
+  .audience__list {
+    margin-top: 60px; }
+  .audience__list_item {
+    padding: 30px 55px; }
   .sign-up__form_descr {
     width: 70%; }
   .facts__slide_img:after {
     content: none; }
   .join-system .container {
     padding: 0 20px; }
+  .prosperity__list {
+    margin-top: 40px; }
+  .prosperity__list_item {
+    margin-top: 60px; }
+  .prosperity__list_item_descr {
+    width: 55%; }
   .join-system__list {
-    display: block; }
+    display: block;
+    margin-top: 50px; }
     .join-system__list_item {
       width: 100%;
       margin: auto; }
       .join-system__list_item_info {
+        top: -70px;
+        padding-bottom: 0;
         margin: auto; }
+        .join-system__list_item_info_title br {
+          display: none; }
         .join-system__list_item_info_descr {
           margin: 16px auto; }
+  .sign-up__form_title h1 {
+    font-size: 50px; }
+  .sign-up__form_descr {
+    width: 80%; }
+  .facts__slide_img:after {
+    content: none; }
   footer .footer-links {
     width: 100%;
     flex-wrap: wrap;
     margin-top: 15px; }
     footer .footer-links__item:first-child {
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+  .reasons,
+  .facts .container {
+    padding-top: 60px; }
+  .join-system,
+  .facts,
+  .sign-up.secondary,
+  .contacts {
+    margin-top: 60px; }
+  .success {
+    margin-top: 40px; }
+  .contacts {
+    margin-bottom: 60px; }
+    .contacts__img {
+      margin: 60px auto 0; } }
+
+@media screen and (max-width: 720px) {
+  .top-block__info_title {
+    font-size: 30px; }
+  .audience__list_item {
+    padding: 30px 50px; }
+  .reasons__list_item_descr {
+    width: 95%; }
+  .contacts {
+    margin-bottom: 40px; }
+  .contacts__img img {
+    margin: auto;
+    display: block; }
+  .contacts__info {
+    position: relative;
+    top: -70px;
+    left: 0;
+    right: 0;
+    padding: 76px 30px 0px 30px;
+    width: 360px;
+    text-align: center; } }
 
 @media screen and (max-width: 600px) {
+  .title h1 {
+    font-size: 26px; }
   .top-block__info_wrapper {
-    padding: 30px 60px; }
+    padding: 60px 25px; }
   .top-block__info_title {
-    font-size: 22px; }
+    font-size: 26px; }
+  .top-block__info_descr {
+    width: 90%;
+    font-size: 16px;
+    margin: 35px auto 0; }
   .audience__list_item {
     width: 100%;
     padding: 30px 20px; }
     .audience__list_item_descr {
       text-align: center; }
   .sign-up__form {
-    padding: 20px; }
+    padding: 60px; }
     .sign-up__form form {
       width: 100%; }
     .sign-up__form_title h1 {
-      font-size: 26px; }
+      font-size: 34px; }
     .sign-up__form_title:before {
       top: -4px; }
+    .sign-up__form_descr {
+      width: 90%; }
     .sign-up__form_pre {
       margin-top: 50px; }
     .sign-up__form .btn {
-      margin: 30px auto 20px;
       display: block; }
     .sign-up__form_input {
       width: 100%; }
     .sign-up__form .btn {
       padding: 27px 30px; }
+  .reasons .container {
+    padding: 0 45px; }
   .reasons__list_item {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 40px; }
     .reasons__list_item_descr {
-      width: 100%; }
+      width: 97%; }
   .facts__counter {
     width: 100%; }
     .facts__counter_item {
@@ -2214,27 +2326,15 @@ footer {
         width: 100%; }
     .facts__counter > div {
       width: 100%; }
-  .contacts {
-    margin-bottom: 20px; }
-    .contacts .container {
-      width: 100%; }
-    .contacts__img {
-      max-width: 100%; }
-      .contacts__img img {
-        max-width: 100%;
-        max-height: 100%; }
-    .contacts__info {
-      width: 100%;
-      padding: 20px;
-      position: static; }
-      .contacts__info_name {
-        text-align: center; }
   .success .container {
-    padding: 0 20px; } }
+    padding: 0 20px; }
+  .reasons,
+  .facts .container {
+    padding-top: 60px; } }
 
 @media screen and (max-width: 480px) {
   .title h1 {
-    font-size: 26px; }
+    font-size: 22px; }
   .top-block__info_wrapper {
     padding: 30px 30px; }
   .top-block {
@@ -2246,6 +2346,18 @@ footer {
       padding: 0; }
       .top-block header .container {
         padding: 0 20px; }
+  .audience__list_item_title {
+    font-size: 22px; }
+  .audience__list_item_descr {
+    font-size: 14px; }
+  .top-block__info_title {
+    font-size: 27px; }
+  .top-block__info_descr {
+    font-size: 14px; }
+  .join-system__list_item_info_descr {
+    font-size: 14px; }
+  .reasons__list_item_title {
+    font-size: 18px; }
   .reasons__list_item_descr {
     font-size: 14px; }
   .slider__item > div {
@@ -2255,131 +2367,84 @@ footer {
     font-size: 14px; }
   .slider__item_name {
     margin-top: 15px; }
+  .prosperity__list_item_title {
+    font-size: 20px; }
   .prosperity__list_item_descr {
-    font-size: 15px; }
+    font-size: 14px; }
   .sign-up__form_title h1 {
-    font-size: 40px; }
+    font-size: 30px; }
+  .sign-up__form .btn {
+    width: 100%; }
   .sign-up__form_descr {
-    font-size: 19px;
-    width: 85%; }
+    font-size: 18px;
+    width: 100%; }
+  .facts__counter_item_descr {
+    font-size: 14px; }
+  .facts__counter_item_title {
+    font-size: 22px; }
+  .facts__slide {
+    margin-top: 40px; }
   footer .container {
     justify-content: center;
     font-size: 14px; }
     footer .container .copyright {
       font-size: 14px; }
     footer .container .footer-links {
-      justify-content: center; } }
-
-@media screen and (max-width: 414px) {
-  .title h1 {
-    font-size: 33px; }
-  .top-block__info_wrapper {
-    padding: 30px 20px; }
-  .top-block__info_title {
-    width: 92%;
-    margin: auto; }
-  .top-block__info_descr {
-    font-size: 14px; }
-  .reasons__list_item_descr {
-    font-size: 14px; }
-  .audience__list_item_descr {
-    font-size: 17px; }
-  .join-system__list_item_info {
-    padding: 15px 20px;
-    width: 97%; }
-  .join-system__list_item_info_descr {
-    font-size: 13px; }
-  .prosperity__list {
-    margin-bottom: 30px; }
-  .prosperity__list_item {
-    padding: 0 10px; }
-    .prosperity__list_item_title br {
-      display: none; }
+      justify-content: center; }
   .sign-up__form {
-    padding: 30px 25px; }
-  .sign-up__form .btn {
-    width: 100%;
-    margin-top: 0px; }
-  .sign-up__bg {
-    height: 300px; }
-  .sign-up__form_title h1 {
-    font-size: 34px; }
-  .sign-up__form_descr {
-    font-size: 16px; }
-  .success__subtitle {
-    font-size: 12px; }
-  .audience__list,
-  .join-system,
-  .facts,
-  .success,
-  .prosperity,
-  .sign-up.secondary,
-  .contacts {
-    margin-top: 30px; }
-  .facts .container {
-    padding-top: 30px; }
-  .contacts__info_name {
-    font-size: 24px; }
-  .contacts__info_name {
-    margin-bottom: 15px;
-    margin-top: 10px; }
-  .contacts__img {
-    margin: 30px auto 0; } }
+    padding: 60px 30px; }
+  .contacts__img img {
+    max-width: 100%;
+    max-height: 100%; }
+  .contacts__info {
+    max-width: 360px;
+    width: 100%; } }
 
 @media screen and (max-width: 375px) {
-  .title h1 {
-    font-size: 30px; }
   .top-block__info_title {
-    font-size: 21px;
-    width: 100%; }
-  .top-block__info_descr {
-    font-size: 17px; }
-  .reasons__list_item_descr {
+    font-size: 24px; }
+  .top-block__info_wrapper {
+    padding: 30px 10px; }
+  .slider__item_descr {
+    line-height: 18px; }
+  .contacts__info_name {
+    font-size: 24px;
+    margin-bottom: 40px; }
+  .contacts__info_text {
     font-size: 16px; }
-  .audience__list_item_descr {
-    font-size: 16px; }
-  .join-system__list_item_info {
-    padding: 15px 35px;
-    width: 90%; }
-  .sign-up__form_title h1 {
-    font-size: 25px; }
-  .sign-up__form_descr {
-    width: 100%; } }
+  .contacts {
+    margin-bottom: 0; } }
 
 @media screen and (max-width: 320px) {
   .title h1 {
-    font-size: 25px; }
+    font-size: 20px; }
   .top-block__info_title {
-    font-size: 18px; }
-  .top-block__info_descr {
-    font-size: 14px; }
-  .top-block__info .btn {
-    padding: 22px 23px; }
-  .audience__list_item_descr {
-    font-size: 13px; }
-  .reasons {
-    padding-top: 30px; }
-    .reasons__list {
-      margin-top: 30px; }
-      .reasons__list_item_descr {
-        font-size: 13px; }
-  .join-system__list_item_info {
-    padding: 15px 20px; }
-  .join-system__list_item_info_descr {
-    font-size: 12px; }
-  .join-system__list {
-    margin-top: 10px; }
-  .sign-up__form_descr {
-    font-size: 19px; }
-  .slider__item_descr {
-    line-height: 1.3em; }
+    font-size: 22px; }
+  .reasons .container {
+    padding: 0 20px; }
+  .audience__list_item {
+    padding: 30px 10px; }
+  .reasons__list_item_descr {
+    width: 100%; }
+  .reasons__list_item_title {
+    font-size: 16px; }
+  .join-system__list_item_info_title {
+    font-size: 16px; }
+  .prosperity__list_item_title {
+    font-size: 16px; }
   .prosperity__list_item_descr {
-    width: 95%; }
-  .prosperity,
+    width: 85%; }
+  .prosperity__list_item_number {
+    font-size: 180px; }
   .prosperity__list_item {
-    margin-top: 0; }
-  .contacts__info_name {
-    margin-bottom: 30px; } }
+    margin-top: 40px; }
+  .sign-up__form_title h1 {
+    font-size: 28px; }
+  .sign-up__form_descr {
+    font-size: 16px;
+    width: 100%; }
+  .facts .container {
+    padding-top: 40px; } }
 
 @font-face {
   font-family: 'Rubik';

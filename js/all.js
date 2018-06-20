@@ -213,7 +213,7 @@ function isInViewport(el, offset = 0) {
         if (window.innerWidth > 1440) {
             slidesToShow = 3;
             refresh();
-        } else if (window.innerWidth > 980) {
+        } else if (window.innerWidth > 1112) {
             slidesToShow = 2
             refresh();
         } else {
