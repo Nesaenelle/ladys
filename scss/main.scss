@@ -137,16 +137,15 @@ h1 {
             }
         }
         &_descr {
-            // transition: 1s ease;
             margin-top: 82px;
             font-size: 18px;
-            // width: 80%;
+            width: 90%;
             opacity: 0;
             line-height: 1.5em;
             animation-fill-mode: forwards;
             &[data-animate="true"] {
                 animation-duration: 2s;
-                animation-name: slideinRight; // animation-delay: 1.5s;
+                animation-name: slideinRight;
             }
         }
         .btn {
@@ -628,9 +627,9 @@ h1 {
     &__form {
         width: 50%;
         background: $c-form-bg;
-        padding: 210px 35px 181px 107px;
-        display: flex;
-        align-items: center;
+        padding: 205px 35px 181px 111px;
+        // display: flex;
+        // align-items: center;
         opacity: 0;
         animation-fill-mode: forwards;
         $c: &;
@@ -665,16 +664,16 @@ h1 {
                 content: '';
                 left: -13px;
                 width: 30px;
-                height: calc(100% + 22px);
+                height: calc(100% + 17px);
                 background: #fff;
                 position: absolute;
-                top: -10px;
+                top: -5px;
                 z-index: 0;
             }
             h1 {
                 font-size: 72px;
                 position: relative;
-                line-height: 1.5em; // word-break: break-all;
+                // line-height: 1.5em; // word-break: break-all;
             }
         }
         &_descr {
@@ -684,13 +683,14 @@ h1 {
             position: relative;
         }
         &_pre {
-            margin-top: 88px;
-            margin-bottom: 28px;
+            margin-top: 86px;
+            margin-bottom: 26px;
             font-size: 18px;
             line-height: 1.5em;
         }
         .btn {
-            padding: 26px 72px;
+            padding: 26px 69px;
+            font-size: 13px;
         }
         &_input {
             position: relative;
@@ -698,7 +698,7 @@ h1 {
             margin-bottom: 10px;
             padding: 27px 71px;
             outline: none;
-            width: 75%;
+            width: 500px;
             font-size: 12px;
             letter-spacing: 1.7px;
             &::-webkit-input-placeholder {
