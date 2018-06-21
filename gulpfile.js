@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var server = require('gulp-server-livereload');
 
+var cssmin = require('gulp-cssmin');
+
 //style paths
 var sassFiles = 'scss/style.scss',
     cssDest = './';
@@ -9,6 +11,7 @@ var sassFiles = 'scss/style.scss',
 gulp.task('styles', function(){
     gulp.src(sassFiles)
         .pipe(sass().on('error', sass.logError))
+        .pipe(cssmin())
         .pipe(gulp.dest(cssDest));
 });
 

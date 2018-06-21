@@ -38,9 +38,7 @@
         padding: 27px 73px;
     }
 
-    &#modal-popup {
-        // max-height: 450px;
-    }
+    &#modal-popup {}
     &__close {
         background: url(img/close.svg) no-repeat;
         background-size: cover;
@@ -98,7 +96,8 @@
 
 @media screen and (max-width: 600px) {
     .modal {
-        padding: 50px 20px;
+        padding: 70px 50px;
+        max-height: 602px;
         .sign-up__form_title {
             &:before {
                 top: -10px;
@@ -116,6 +115,12 @@
             margin: 40px auto 0;
             padding: 27px 30px;
         }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .modal {
+        max-height: 640px;
     }
 }
 

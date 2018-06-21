@@ -1,3 +1,61 @@
+if (!Array.prototype.forEach) {
+
+  Array.prototype.forEach = function (callback, thisArg) {
+
+    var T, k;
+
+    if (this == null) {
+      throw new TypeError(' this is null or not defined');
+    }
+
+    // 1. Положим O равным результату вызова ToObject passing the |this| value as the argument.
+    var O = Object(this);
+
+    // 2. Положим lenValue равным результату вызова внутреннего метода Get объекта O с аргументом "length".
+    // 3. Положим len равным ToUint32(lenValue).
+    var len = O.length >>> 0;
+
+    // 4. Если IsCallable(callback) равен false, выкинем исключение TypeError.
+    // Смотрите: http://es5.github.com/#x9.11
+    if (typeof callback !== 'function') {
+        throw new TypeError(callback + ' is not a function');
+    }
+
+    // 5. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
+    if (arguments.length > 1) {
+      T = thisArg;
+    }
+
+    // 6. Положим k равным 0
+    k = 0;
+
+    // 7. Пока k < len, будем повторять
+    while (k < len) {
+
+      var kValue;
+
+      // a. Положим Pk равным ToString(k).
+      //   Это неявное преобразование для левостороннего операнда в операторе in
+      // b. Положим kPresent равным результату вызова внутреннего метода HasProperty объекта O с аргументом Pk.
+      //   Этот шаг может быть объединён с шагом c
+      // c. Если kPresent равен true, то
+      if (k in O) {
+
+        // i. Положим kValue равным результату вызова внутреннего метода Get объекта O с аргументом Pk.
+        kValue = O[k];
+
+        // ii. Вызовем внутренний метод Call функции callback с объектом T в качестве значения this и
+        // списком аргументов, содержащим kValue, k и O.
+        callback.call(T, kValue, k, O);
+      }
+      // d. Увеличим k на 1.
+      k++;
+    }
+    // 8. Вернём undefined.
+  };
+}
+
+
 var Events = function() {
     this.coll = [];
     this.on = function(func) {
@@ -35,15 +93,15 @@ window.addEventListener('scroll', function(e) {
 
 
 
-function isScrolledIntoView(elem, offsetVal = 0) {
-    var docViewTop = window.pageYOffset;
-    var docViewBottom = docViewTop + window.innerHeight;
-    var elemTop = offset(elem).top;
-    var elemBottom = elemTop + elem.clientHeight;
-    return ( /*(elemBottom + offsetVal <= docViewBottom) && */ (elemTop >= docViewTop));
+// function isScrolledIntoView(elem, offsetVal = 0) {
+//     var docViewTop = window.pageYOffset;
+//     var docViewBottom = docViewTop + window.innerHeight;
+//     var elemTop = offset(elem).top;
+//     var elemBottom = elemTop + elem.clientHeight;
+//     return ( /*(elemBottom + offsetVal <= docViewBottom) && */ (elemTop >= docViewTop));
 
-    // docViewTop >= elemTop - (offsetVal ) /*- window.innerHeight*/ ; // /
-}
+//     // docViewTop >= elemTop - (offsetVal ) /*- window.innerHeight*/ ; // /
+// }
 
 function offset(el) {
     var rect = el.getBoundingClientRect(),
@@ -52,7 +110,7 @@ function offset(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-function isInViewport(el, offset = 0) {
+function isInViewport(el, offset) {
     var top = el.offsetTop + offset;
     var left = el.offsetLeft;
     var width = el.offsetWidth;
@@ -230,15 +288,15 @@ function isInViewport(el, offset = 0) {
     swapInit();
 
     function swapInit() {
-        let pageWidth = window.innerWidth || document.body.clientWidth;
-        let treshold = Math.max(1, Math.floor(0.01 * (pageWidth)));
-        let touchstartX = 0;
-        let touchstartY = 0;
-        let touchendX = 0;
-        let touchendY = 0;
+        var pageWidth = window.innerWidth || document.body.clientWidth;
+        var treshold = Math.max(1, Math.floor(0.01 * (pageWidth)));
+        var touchstartX = 0;
+        var touchstartY = 0;
+        var touchendX = 0;
+        var touchendY = 0;
 
-        const limit = Math.tan(45 * 1.5 / 180 * Math.PI);
-        const gestureZone = slider; //document.getElementById('modalContent');
+        var limit = Math.tan(45 * 1.5 / 180 * Math.PI);
+        var gestureZone = slider; //document.getElementById('modalContent');
 
         gestureZone.addEventListener('touchstart', function(event) {
             touchstartX = event.changedTouches[0].screenX;
@@ -252,10 +310,10 @@ function isInViewport(el, offset = 0) {
         }, false);
 
         function handleGesture(e) {
-            let x = touchendX - touchstartX;
-            let y = touchendY - touchstartY;
-            let xy = Math.abs(x / y);
-            let yx = Math.abs(y / x);
+            var x = touchendX - touchstartX;
+            var y = touchendY - touchstartY;
+            var xy = Math.abs(x / y);
+            var yx = Math.abs(y / x);
             if (Math.abs(x) > treshold || Math.abs(y) > treshold) {
                 if (yx <= limit) {
                     if (x < 0) {
@@ -309,7 +367,8 @@ function isInViewport(el, offset = 0) {
     var counterItems = document.querySelectorAll('[data-counter]');
     var trigerred = 0;
 
-    function animateValue(element, start, end, duration, value = '') {
+    function animateValue(element, start, end, duration, value) {
+        value = value || '';
         var range = end - start;
         var current = start;
         var increment = (end / duration) * 10; //;end > start ? (duration/end) : (-1);
