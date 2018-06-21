@@ -115,9 +115,7 @@
         &__scroller {
             flex-wrap: wrap;
         }
-        &__arrows {
-            display: none;
-        }
+
 
         &__item {
             width: calc(100%/2 - 20px);
@@ -220,6 +218,20 @@
     }
     .facts__counter>div {
         width: 95%;
+    }
+
+    .join-system {
+        margin-top: 120px;
+        &__list {
+            margin-top: 80px;
+        }
+    }
+
+    .sign-up__form {
+        padding: 150px 35px 150px 88px;
+    }
+    .sign-up__form_descr {
+        font-size: 22px;
     }
 
     .sign-up__form form {
@@ -669,7 +681,7 @@
         margin-top: 60px;
     }
     .audience__list_item {
-        padding: 30px 55px;
+        padding: 55px 55px;
     }
     .sign-up__form_descr {
         width: 70%;
@@ -677,7 +689,9 @@
     .facts__slide_img:after {
         content: none;
     }
-
+    .join-system__list_item_info_title {
+        margin-top: 15px;
+    }
     .join-system .container {
         padding: 0 20px;
     }
@@ -794,10 +808,10 @@
         font-size: 26px;
     }
     .top-block__info_wrapper {
-        padding: 60px 25px;
+        padding: 120px 15px;
     }
     .top-block__info_title {
-        font-size: 26px;
+        font-size: 32px;
     }
     .top-block__info_descr {
         width: 90%;
@@ -808,7 +822,10 @@
         &__list {
             &_item {
                 width: 100%;
-                padding: 30px 20px;
+                padding: 0 20px 60px 20px;
+                &:hover {
+                    background: initial;
+                }
                 &_descr {
                     text-align: center;
                 }
@@ -918,6 +935,12 @@
     .facts .container {
         padding-top: 60px;
     }
+
+    .slider {
+        &__arrows {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -925,7 +948,7 @@
         font-size: 22px;
     }
     .top-block__info_wrapper {
-        padding: 30px 30px;
+        padding: 100px 20px;
     }
     .top-block {
         padding: 0;
@@ -963,7 +986,7 @@
     }
     .reasons__list_item_descr {
         font-size: 14px;
-        width: 100%;
+        width: 90%;
     }
     .slider__item>div {
         padding: 0 20px;
@@ -985,7 +1008,7 @@
         font-size: 30px;
     }
     .sign-up__form_pre {
-        // font-size: 14px;
+        font-size: 14px;
     }
     .sign-up__form .btn {
         width: 100%;
@@ -1033,11 +1056,19 @@
 
 @media screen and (max-width: 375px) {
     .top-block__info_title {
-        font-size: 24px;
+        font-size: 18px;
     }
-
+    .top-block__info .btn {
+        margin: 20px auto 0;
+    }
     .top-block__info_wrapper {
         padding: 30px 10px;
+    }
+    .audience__list_item {
+        padding: 0 10px 60px 10px;
+    }
+    .join-system__list {
+        margin-top: 60px;
     }
     .slider__item_descr {
         line-height: 18px;
@@ -1046,9 +1077,7 @@
         font-size: 24px;
         margin-bottom: 40px;
     }
-    .contacts__info {
-
-    }
+    .contacts__info {}
     .contacts__info_text {
         font-size: 16px;
     }
@@ -1063,12 +1092,10 @@
         font-size: 20px;
     }
     .top-block__info_title {
-        font-size: 22px;
+        font-size: 18px;
     }
 
-    .audience__list_item {
-        padding: 30px 10px;
-    }
+
     .reasons__list_item_descr {
         width: 100%;
     }

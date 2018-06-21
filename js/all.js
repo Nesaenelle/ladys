@@ -187,17 +187,17 @@ function isInViewport(el, offset = 0) {
     }
 
     function autoScroll() {
-        if(interval) clearInterval(interval);
+        if (interval) clearInterval(interval);
         interval = setInterval(function() {
             goTo(curSlide + 1);
         }, 6000);
     }
 
-    slider.addEventListener('mouseenter', function(){
+    slider.addEventListener('mouseenter', function() {
         clearInterval(interval);
     }, false);
 
-    slider.addEventListener('mouseleave', function(){
+    slider.addEventListener('mouseleave', function() {
         autoScroll();
     }, false);
 
@@ -231,14 +231,14 @@ function isInViewport(el, offset = 0) {
 
     function swapInit() {
         let pageWidth = window.innerWidth || document.body.clientWidth;
-        let treshold = Math.max(1,Math.floor(0.01 * (pageWidth)));
+        let treshold = Math.max(1, Math.floor(0.01 * (pageWidth)));
         let touchstartX = 0;
         let touchstartY = 0;
         let touchendX = 0;
         let touchendY = 0;
 
         const limit = Math.tan(45 * 1.5 / 180 * Math.PI);
-        const gestureZone = slider;//document.getElementById('modalContent');
+        const gestureZone = slider; //document.getElementById('modalContent');
 
         gestureZone.addEventListener('touchstart', function(event) {
             touchstartX = event.changedTouches[0].screenX;
@@ -341,18 +341,10 @@ function isInViewport(el, offset = 0) {
 
 (function() {
     var btn = document.querySelector('#go-top');
-
+    var body = $("html, body");
     if (btn) {
         btn.addEventListener('click', function() {
-
-            var interval = window.setInterval(function() {
-                var scrollTop = document.documentElement.scrollTop;
-                if (scrollTop <= 0) {
-                    clearInterval(interval);
-                } else {
-                    window.scrollTo(0, scrollTop - 35);
-                }
-            });
+            body.stop().animate({ scrollTop: 0 }, 500);
         }, false);
     }
 
@@ -416,13 +408,14 @@ function isInViewport(el, offset = 0) {
     // var interval;
     var body = $("html, body");
 
-    $('[data-navigation-link]').on('click', function(e){
+    $('[data-navigation-link]').on('click', function(e) {
         e.preventDefault();
         var id = this.getAttribute('data-navigation-link');
         var elem = document.querySelector('[data-navigation="' + id + '"]');
         var topOffset = this.getAttribute('data-navigation-offset') || 0;
-        if (elem) {console.log(offset(elem).top - topOffset);
-            body.stop().animate({scrollTop: offset(elem).top - topOffset}, 500);
+        if (elem) {
+            console.log(offset(elem).top - topOffset);
+            body.stop().animate({ scrollTop: offset(elem).top - topOffset }, 500);
         }
 
     });

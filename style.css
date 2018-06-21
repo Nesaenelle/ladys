@@ -1852,8 +1852,6 @@ footer {
     padding: 120px 3% 115px 4%; }
   .slider__scroller {
     flex-wrap: wrap; }
-  .slider__arrows {
-    display: none; }
   .slider__item {
     width: calc(100%/2 - 20px); }
     .slider__item.slideOutUpLeft:nth-child(2n + 1), .slider__item.slideOutUpRight:nth-child(2n + 1) {
@@ -1907,6 +1905,14 @@ footer {
     font-size: 44px; }
   .facts__counter > div {
     width: 95%; }
+  .join-system {
+    margin-top: 120px; }
+    .join-system__list {
+      margin-top: 80px; }
+  .sign-up__form {
+    padding: 150px 35px 150px 88px; }
+  .sign-up__form_descr {
+    font-size: 22px; }
   .sign-up__form form {
     width: 90%; }
   .sign-up__form_input {
@@ -2194,11 +2200,13 @@ footer {
   .audience__list {
     margin-top: 60px; }
   .audience__list_item {
-    padding: 30px 55px; }
+    padding: 55px 55px; }
   .sign-up__form_descr {
     width: 70%; }
   .facts__slide_img:after {
     content: none; }
+  .join-system__list_item_info_title {
+    margin-top: 15px; }
   .join-system .container {
     padding: 0 20px; }
   .prosperity__list {
@@ -2273,16 +2281,18 @@ footer {
   .title h1 {
     font-size: 26px; }
   .top-block__info_wrapper {
-    padding: 60px 25px; }
+    padding: 120px 15px; }
   .top-block__info_title {
-    font-size: 26px; }
+    font-size: 32px; }
   .top-block__info_descr {
     width: 90%;
     font-size: 16px;
     margin: 35px auto 0; }
   .audience__list_item {
     width: 100%;
-    padding: 30px 20px; }
+    padding: 0 20px 60px 20px; }
+    .audience__list_item:hover {
+      background: initial; }
     .audience__list_item_descr {
       text-align: center; }
   .sign-up__form {
@@ -2340,13 +2350,15 @@ footer {
     padding: 0 20px; }
   .reasons,
   .facts .container {
-    padding-top: 60px; } }
+    padding-top: 60px; }
+  .slider__arrows {
+    display: none; } }
 
 @media screen and (max-width: 480px) {
   .title h1 {
     font-size: 22px; }
   .top-block__info_wrapper {
-    padding: 30px 30px; }
+    padding: 100px 20px; }
   .top-block {
     padding: 0; }
     .top-block .container {
@@ -2372,7 +2384,7 @@ footer {
     font-size: 18px; }
   .reasons__list_item_descr {
     font-size: 14px;
-    width: 100%; }
+    width: 90%; }
   .slider__item > div {
     padding: 0 20px; }
   .slider__item_descr {
@@ -2386,6 +2398,8 @@ footer {
     font-size: 14px; }
   .sign-up__form_title h1 {
     font-size: 30px; }
+  .sign-up__form_pre {
+    font-size: 14px; }
   .sign-up__form .btn {
     width: 100%; }
   .sign-up__form_descr {
@@ -2417,9 +2431,15 @@ footer {
 
 @media screen and (max-width: 375px) {
   .top-block__info_title {
-    font-size: 24px; }
+    font-size: 18px; }
+  .top-block__info .btn {
+    margin: 20px auto 0; }
   .top-block__info_wrapper {
     padding: 30px 10px; }
+  .audience__list_item {
+    padding: 0 10px 60px 10px; }
+  .join-system__list {
+    margin-top: 60px; }
   .slider__item_descr {
     line-height: 18px; }
   .contacts__info_name {
@@ -2434,9 +2454,7 @@ footer {
   .title h1 {
     font-size: 20px; }
   .top-block__info_title {
-    font-size: 22px; }
-  .audience__list_item {
-    padding: 30px 10px; }
+    font-size: 18px; }
   .reasons__list_item_descr {
     width: 100%; }
   .reasons__list_item_title {
