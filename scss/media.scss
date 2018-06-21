@@ -955,11 +955,15 @@
     .join-system__list_item_info_descr {
         font-size: 14px;
     }
+    .reasons .container {
+        padding: 0 20px;
+    }
     .reasons__list_item_title {
         font-size: 18px;
     }
     .reasons__list_item_descr {
         font-size: 14px;
+        width: 100%;
     }
     .slider__item>div {
         padding: 0 20px;
@@ -1021,6 +1025,9 @@
         max-width: 360px;
         width: 100%;
     }
+    .facts .container {
+        padding-top: 40px;
+    }
 }
 
 
@@ -1058,9 +1065,7 @@
     .top-block__info_title {
         font-size: 22px;
     }
-    .reasons .container {
-        padding: 0 20px;
-    }
+
     .audience__list_item {
         padding: 30px 10px;
     }

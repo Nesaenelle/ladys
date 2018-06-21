@@ -46,10 +46,20 @@
         background-size: cover;
         position: absolute;
         right: 18px;
-        top: 24px;
+        top: 18px;
         cursor: pointer;
         width: 17px;
         height: 17px;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: calc(100% + 14px);
+            height: calc(100% + 14px);
+            margin-left: -7px;
+            margin-top: -7px;
+            pointer-events: auto;
+        }
         &:hover {
             transform: scale(1.1);
         }
@@ -78,7 +88,7 @@
 @media screen and (max-width:980px) {
     .modal {
         width: 90%;
-        padding: 35px 50px;
+        padding: 50px;
         .sign-up__form_title h1 {
             font-size: 40px;
             line-height: 1.5em;
@@ -88,7 +98,7 @@
 
 @media screen and (max-width: 600px) {
     .modal {
-        padding: 30px 20px;
+        padding: 50px 20px;
         .sign-up__form_title {
             &:before {
                 top: -10px;
@@ -118,7 +128,7 @@
         .sign-up__form_title {
 
             h1 {
-                text-align: center;
+                // text-align: center;
                 &:before {
                     content: none;
                 }
@@ -132,7 +142,8 @@
             margin-top: 30px;
         }
         .btn-pink {
-            // margin: 10px auto 0;
+            width: 100%;
+            margin: 0px auto 0;
         }
     }
 }
