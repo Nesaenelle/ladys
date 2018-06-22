@@ -1,6 +1,5 @@
 .icon {
     display: inline-block;
-
     &-btn-arrow-down {
         position: relative;
         &:before {
@@ -15,7 +14,6 @@
             display: block;
         }
     }
-
     &-btn-arrow-right {
         position: relative;
         &:before {
@@ -31,37 +29,31 @@
         }
     }
 
-    // &-skype {
-    //     background: url(img/skype-logo.svg) no-repeat;
-    //     background-size: cover!important;
-    //     width: 14px;
-    //     height: 14px;
-    //     margin-right: 15px;
-    // }
+    &-skype {
+        width: 18px;
+        height: 18px;
+    }
 
-    // &-email {
-    //     background: url(img/black-envelope.svg) no-repeat;
-    //     background-size: cover!important;
-    //     width: 16px;
-    //     height: 16px;
-    //     margin-right: 15px;
-    // }
+    &-email {
 
-    // &-phone {
-    //     background: url(img/end-call-button.svg) no-repeat;
-    //     background-size: cover!important;
-    //     width: 17px;
-    //     height: 17px;
-    //     margin-right: 15px;
+        width: 18px;
+        height: 18px;
+    }
 
-    //     transform: rotate(-130deg);
-    // }
+    &-phone {
+        width: 19px;
+        height: 19px;
+    }
 
-    // &-top-arrow {
-    //     background: url(img/long-arrow-pointing-up.svg) no-repeat;
-    //     background-size: cover!important;
-    //     width: 17px;
-    //     height: 17px;
-    //     @include absolute-center;
-    // }
+    &-arrow-top {
+        width: 21px;
+        height: 21px;
+        fill: #fff;
+    }
+
+    &-arrow{
+        width: 30px;
+        height: 30px;
+        fill: #000;
+    }
 }

@@ -23,9 +23,14 @@
             height: 30px;
             background-size: cover!important;
             cursor: pointer;
-            transition: 0.3s;
+        
+            .icon {
+                transition: 0.3s;
+            }
             &:hover {
-                color: $c-pink;
+               .icon {
+                    fill: $c-pink;
+               }
             }
             .mdi {
                 font-size: 28px;

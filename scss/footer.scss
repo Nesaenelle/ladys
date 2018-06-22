@@ -64,19 +64,14 @@ footer {
         opacity: 1;
         visibility: visible;
     }
-    .mdi {
-        color: #ed2984;
-        font-size: 18px;
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
+    .icon {
+        fill: $c-pink;
         transform: rotate(-90deg);
         transition: 0.2s;
     }
     &:hover {
-        .mdi {
-            color: white;
+        .icon {
+            fill: #fff;
         }
         background: $c-pink;
     }

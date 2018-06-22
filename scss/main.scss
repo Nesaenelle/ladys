@@ -403,9 +403,7 @@ h1 {
         margin-top: 49px;
         &_item {
             width: calc(100%/3 - 15px);
-            position: relative;
-            // max-height: 445px;
-
+            position: relative; // max-height: 445px;
             display: flex;
             align-items: center;
             margin-top: 80px;
@@ -454,12 +452,10 @@ h1 {
                 }
             }
             &_img {
-                font-size: 0;
-                // width: 100%;
+                font-size: 0; // width: 100%;
                 width: calc(50% + 100px);
-                max-width: 320px;
-                // position: absolute;
-                top:0;
+                max-width: 320px; // position: absolute;
+                top: 0;
                 img {
                     width: 100%;
                     object-fit: cover;
@@ -481,8 +477,7 @@ h1 {
                 left: 43%;
                 top: 0;
                 bottom: 0;
-                transition: 1s;
-                // box-shadow: 15px 20px 42px -28px #00000036;
+                transition: 1s; // box-shadow: 15px 20px 42px -28px #00000036;
                 animation-fill-mode: forwards; // &[data-animate="true"] {
                 //     transform: translateX(0);
                 //     opacity: 1;
@@ -627,8 +622,7 @@ h1 {
     &__form {
         width: 50%;
         background: $c-form-bg;
-        padding: 205px 35px 181px 111px;
-        // display: flex;
+        padding: 205px 35px 181px 111px; // display: flex;
         // align-items: center;
         opacity: 0;
         animation-fill-mode: forwards;
@@ -672,8 +666,7 @@ h1 {
             }
             h1 {
                 font-size: 72px;
-                position: relative;
-                // line-height: 1.5em; // word-break: break-all;
+                position: relative; // line-height: 1.5em; // word-break: break-all;
             }
         }
         &_descr {
@@ -883,8 +876,7 @@ h1 {
         font-size: 0;
         width: 100%;
         max-width: 751px;
-        margin: 87px auto 0;
-        transition: 1s ease;
+        margin: 87px auto 0; // transition: 1s ease;
         opacity: 0;
         visibility: hidden;
         transform: translateX(-200px);
@@ -898,18 +890,15 @@ h1 {
         width: 500px;
         margin: auto;
         background: #fff;
-        padding: 76px 30px 70px 63px;
-        position: relative;
-        transition: 0.2s ease;
+            padding: 78px 30px 70px 58px;
+        position: relative; // transition: 0.2s ease;
         opacity: 0;
         height: 86%;
         margin: auto;
-        position: absolute;
-        // right: 0;
+        position: absolute; // right: 0;
         left: 352px;
         top: 0;
-        bottom: 0;
-        transition: 1s ease;
+        bottom: 0; // transition: 1s ease;
         transform: translateX(200px);
         &_name {
             font-size: 30px;
@@ -923,25 +912,25 @@ h1 {
             display: flex;
             align-items: center;
             white-space: nowrap;
-            &:hover {
-                a {
-                    color: $c-pink;
-                }
-            }
-            .mdi {
-                margin-right: 17px;
-                &.mdi-skype {
-                    position: relative;
-                    top: 2px;
-                }
-                &.mdi-email {
-                    position: relative;
-                    top: 1px;
-                }
-            }
-            a {
-                position: relative;
+            .icon {
                 transition: 0.3s;
+                margin-right: 17px;
+            }
+            &:hover {
+                a,
+                .icon {
+                    color: $c-pink;
+                    fill: $c-pink;
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                position: relative;
+                span {
+                    transition: 0.3s;
+                }
             }
         }
     }
